@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.getElementById('outercustomization').style.zIndex = 5; //set default z-index for settings modal
 document.getElementById('outerconsole').style.zIndex = 5; //set default z-index for console modal
-let serverurl = "https://shuffle-names.herokuapp.com/"
+let serverurl = "https://shufflenames-production.up.railway.app"
 var nameresult = document.getElementById("nameresult"); //gets the element to place the resulting name
 var objectsshuffled = 0; //variable to count amount of total results in this session
 var returnedFullName, normalcyvalue, gendervalue, returnedFullName, lastName, possibleCombinations, firstName; //if you dont understand the variable names, shut up! seriously, if you're looking through this code and you don't know what these are, you probably put pineapple on your pizza.
