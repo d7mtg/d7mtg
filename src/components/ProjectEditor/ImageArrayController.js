@@ -1,10 +1,11 @@
-import { ImageUpload, TextField } from 'components'
-import { useFieldArray, useFormContext } from 'react-hook-form'
 import cx from 'clsx'
-import s from './ImageController.module.scss'
+import { ImageUpload, TextField } from 'components'
+import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd'
+import { useFieldArray, useFormContext } from 'react-hook-form'
+import { stripExtension } from 'utils/strings'
 import cs from './common.module.scss'
+import s from './ImageController.module.scss'
 import { RemoveButton } from './RemoveButton'
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd'
 
 export const ImageArrayController = ({ name, className, ...rest }) => {
     const { control, register, formState: { errors } } = useFormContext()
@@ -21,7 +22,7 @@ export const ImageArrayController = ({ name, className, ...rest }) => {
             id: result.id,
             width: result.width,
             height: result.height,
-            alt: result.name,
+            alt: stripExtension(result.name)
         })
     }
 

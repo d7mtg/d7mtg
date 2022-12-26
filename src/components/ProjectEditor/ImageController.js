@@ -1,8 +1,9 @@
+import cx from 'clsx'
 import { ImageUpload, TextField } from 'components'
 import { get, useFormContext } from 'react-hook-form'
-import cx from 'clsx'
-import s from './ImageController.module.scss'
+import { stripExtension } from 'utils/strings'
 import cs from './common.module.scss'
+import s from './ImageController.module.scss'
 import { RemoveButton } from './RemoveButton'
 
 export const ImageController = ({ name, className, ...rest }) => {
@@ -14,7 +15,7 @@ export const ImageController = ({ name, className, ...rest }) => {
             id: result.id,
             width: result.width,
             height: result.height,
-            alt: result.name,
+            alt: stripExtension(result.name)
         }, {
             shouldDirty: true
         })
