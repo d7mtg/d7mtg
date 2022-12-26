@@ -183,10 +183,10 @@ function changetheme() {
 
         var stylesheet = document.getElementById('stylesheet').href;
         if (stylesheet.includes("modern")) {
-            document.getElementById('stylesheet').href = 'cyber.css';
+            document.getElementById('stylesheet').href = '/shuffle/cyber.css';
             console.log("theme set: cyber.css");
         } else if (stylesheet.includes("cyber")) {
-            document.getElementById('stylesheet').href = 'modern.css';
+            document.getElementById('stylesheet').href = '/shuffle/modern.css';
             console.log("theme set: modern.css");
 
         }
