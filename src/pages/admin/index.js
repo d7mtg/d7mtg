@@ -107,12 +107,14 @@ function Admin({ projects: initialProjects }) {
                         <col className={s.controls} />
                     </colgroup>
                     <thead>
-                        <th >Name</th>
-                        <th >Home page</th>
-                        <th >Portfolio page</th>
-                        <th >Position on Home page</th>
-                        <th>Position on Portfolio page</th>
-                        <th >Images</th>
+                        <tr>
+                            <th >Name</th>
+                            <th >Home page</th>
+                            <th >Portfolio page</th>
+                            <th >Position on Home page</th>
+                            <th>Position on Portfolio page</th>
+                            <th >Images</th>
+                        </tr>
                     </thead>
                     <tbody>
 

@@ -32,7 +32,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 100px 50px;
+    padding: 100px 50px;
 
     .innerContainer {
         display: flex;
@@ -72,7 +72,7 @@
         min-width: 50px;
     }
     .homeIndex, .portfolioIndex {
-        min-width: 100px;
+        min-width: 150px;
     }
     
     .flex {
