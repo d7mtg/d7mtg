@@ -67,6 +67,9 @@ const nextConfig = {
                 destination: '/whatsapp/index.html'
             }
         ]
+    },
+    experimental: {
+        scrollRestoration: true
     }
 }
 
