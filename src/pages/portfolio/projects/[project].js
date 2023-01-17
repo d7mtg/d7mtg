@@ -56,13 +56,15 @@ export const Blog = props => {
         links
     } = props
 
-    const [animated, setAnimated] = useState(new Set())
-
+    const [animated, setAnimated] = useState(0)
     const refs = useRef([])
+
     useEffect(() => {
         const observer = new IntersectionObserver(e => {
-            if (e[0].isIntersecting)
-                setAnimated(prev => new Set([...prev, e[0].target.dataset.key]))
+            for (const entry of e) {
+                if (entry.isIntersecting) 
+                    setAnimated(prev => Math.max(prev, entry.target.dataset.index))
+            }
         })
 
         for (const ref of refs.current)
@@ -107,8 +109,8 @@ export const Blog = props => {
 
                 {images?.map((i, index) => <Image
                     key={i.url}
-                    data-key={i.url}
-                    className={cx(s.allphotos, index === 0 && s.firstImage, animated.has(i.url) && s.animate)}
+                    data-index={index}
+                    className={cx(s.allphotos, animated >= index && s.animate)}
                     src={url(i)}
                     alt={i.alt}
                     width={i.width}

@@ -126,14 +126,11 @@
     display: block;
 
     margin-bottom: 0px;
-    transition: all 0.2s ease, transform 750ms ease, opacity 750ms ease;
-
-    &:not(.firstImage) {
-        opacity: 0;
-        transform: translateY(40px);
-    }
+    opacity: 0;
+    transform: translateY(40px);
 
     &.animate {
+        transition: transform 750ms ease, opacity 750ms ease;
         opacity: 1;
         transform: translateY(0);
     }
