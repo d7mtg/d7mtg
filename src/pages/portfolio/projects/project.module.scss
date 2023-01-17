@@ -122,36 +122,43 @@
     display: block;
 
     margin-bottom: 0px;
-    transition: all 0.2s ease;
+    transition: all .2s ease, transform 750ms ease, opacity 750ms ease;
+    opacity: 0;
+    transform: translateY(40px);
 
-    &:first-of-type {
-        position: absolute;
-        top: 200px;
-        right: 5%;
-        display: flex;
-        max-width: 200px;
-        max-height: 100px;
-        height: auto;
-        width: auto;
-        transition: 0.3s;
-        filter: brightness(0);
-        opacity: 0.4;
+    &.loaded {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+.clientLogo {
+    position: absolute;
+    top: 200px;
+    right: 5%;
+    display: flex;
+    max-width: 200px;
+    max-height: 100px;
+    height: auto;
+    width: auto;
+    transition: 0.3s;
+    filter: brightness(0);
+    opacity: 0.4;
+
+    &:hover {
+        opacity: 1;
+        filter: none;
+    }
+
+    @include md {
+        display: none;
+    }
+
+    @include dark {
+        &,
         &:hover {
-            opacity: 1;
-            filter: none;
-        }
-
-        @include md {
-            display: none;
-        }
-
-        @include dark {
-            &,
-            &:hover {
-                filter: brightness(100);
-                opacity: 0.4;
-            }
+            filter: brightness(100);
+            opacity: 0.4;
         }
     }
 }

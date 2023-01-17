@@ -5,9 +5,11 @@ import LightGallery from 'lightgallery/react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { getProject, getProjects, url } from 'utils/backend'
 import s from './project.module.scss'
+import cx from 'clsx'
 
 export default function Project({ project }) {
     const {
@@ -54,6 +56,11 @@ export const Blog = props => {
         links
     } = props
 
+    const [loaded, setLoaded] = useState([])
+    const onLoaded = key => {
+        setLoaded(prev => [...prev, key])
+    }
+
     return <>
         <div className={s.blog}>
             <span className={s.title}>
@@ -84,9 +91,18 @@ export const Blog = props => {
             download={false}
             getCaptionFromTitleOrAlt={false}
             mousewheel>
-            {logo && <Image className={s.allphotos} src={url(logo)} alt={logo.alt} width={logo.width} height={logo.height} />}
+            {logo && <Image className={s.clientLogo} src={url(logo)} alt={logo.alt} width={logo.width} height={logo.height} />}
 
-            {images?.map((i, index) => <Image key={i.url} className={s.allphotos} src={url(i)} alt={i.alt} width={i.width} height={i.height} priority={index < 3} />)}
+            {images?.map((i, index) => <Image
+                key={i.url}
+                className={cx(s.allphotos, index > 0 && loaded.includes(i.url) && s.loaded)}
+                src={url(i)}
+                alt={i.alt}
+                width={i.width}
+                height={i.height}
+                priority={index < 3}
+                onLoadingComplete={img => onLoaded(i.url)}
+            />)}
         </LightGallery>
     </>
 }
