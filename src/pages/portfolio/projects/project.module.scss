@@ -130,7 +130,7 @@
     transform: translateY(40px);
 
     &.animate {
-        transition: transform 750ms ease, opacity 750ms ease;
+        transition: transform 750ms ease, opacity 1.5s ease;
         opacity: 1;
         transform: translateY(0);
     }
