@@ -108,6 +108,10 @@
     }
 }
 
+.gallery {
+    padding-bottom: 40px;
+}
+
 .allphotos {
     width: 100%;
     height: auto;
@@ -122,11 +126,14 @@
     display: block;
 
     margin-bottom: 0px;
-    transition: all .2s ease, transform 750ms ease, opacity 750ms ease;
-    opacity: 0;
-    transform: translateY(40px);
+    transition: all 0.2s ease, transform 750ms ease, opacity 750ms ease;
 
-    &.loaded {
+    &:not(.firstImage) {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    &.animate {
         opacity: 1;
         transform: translateY(0);
     }

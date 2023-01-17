@@ -5,7 +5,7 @@ import LightGallery from 'lightgallery/react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { getProject, getProjects, url } from 'utils/backend'
 import s from './project.module.scss'
@@ -56,10 +56,21 @@ export const Blog = props => {
         links
     } = props
 
-    const [loaded, setLoaded] = useState([])
-    const onLoaded = key => {
-        setLoaded(prev => [...prev, key])
-    }
+    const [animated, setAnimated] = useState(new Set())
+
+    const refs = useRef([])
+    useEffect(() => {
+        const observer = new IntersectionObserver(e => {
+            if (e[0].isIntersecting)
+                setAnimated(prev => new Set([...prev, e[0].target.dataset.key]))
+        })
+
+        for (const ref of refs.current)
+            if (ref)
+                observer.observe(ref)
+
+        return () => observer.disconnect()
+    }, [])
 
     return <>
         <div className={s.blog}>
@@ -85,25 +96,28 @@ export const Blog = props => {
             </div>}
 
         </div>
-        <LightGallery
-            licenseKey='E6B71A52-081F42BE-9A18C3F9-82A1B717'
-            speed={200}
-            download={false}
-            getCaptionFromTitleOrAlt={false}
-            mousewheel>
-            {logo && <Image className={s.clientLogo} src={url(logo)} alt={logo.alt} width={logo.width} height={logo.height} />}
+        <div className={s.gallery}>
+            <LightGallery
+                licenseKey='E6B71A52-081F42BE-9A18C3F9-82A1B717'
+                speed={200}
+                download={false}
+                getCaptionFromTitleOrAlt={false}
+                mousewheel>
+                {logo && <Image className={s.clientLogo} src={url(logo)} alt={logo.alt} width={logo.width} height={logo.height} />}
 
-            {images?.map((i, index) => <Image
-                key={i.url}
-                className={cx(s.allphotos, index > 0 && loaded.includes(i.url) && s.loaded)}
-                src={url(i)}
-                alt={i.alt}
-                width={i.width}
-                height={i.height}
-                priority={index < 3}
-                onLoadingComplete={img => onLoaded(i.url)}
-            />)}
-        </LightGallery>
+                {images?.map((i, index) => <Image
+                    key={i.url}
+                    data-key={i.url}
+                    className={cx(s.allphotos, index === 0 && s.firstImage, animated.has(i.url) && s.animate)}
+                    src={url(i)}
+                    alt={i.alt}
+                    width={i.width}
+                    height={i.height}
+                    priority={index < 3}
+                    ref={ref => refs.current = [...refs.current, ref]}
+                />)}
+            </LightGallery>
+        </div>
     </>
 }
 
