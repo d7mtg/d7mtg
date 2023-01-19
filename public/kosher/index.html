@@ -1423,9 +1423,9 @@
       div.className = "kosherBox";
       //setting atrributes for image
       image.className = "kosherPNG";
-      image.src = "kosher-png/" + object.png;
+      image.src = "../kosher-png/" + object.png;
       //setting atrributes for link
-      link.href = "kosher-pdf/" + object.pdf;
+      link.href = "../kosher-pdf/" + object.pdf;
       link.download = "";
       //setting atrributes for  button
       button.className = "kosherDownload";
@@ -1479,11 +1479,7 @@
     searchBox.addEventListener("change", search)
     searchBox.addEventListener("keyup", search)
   </script>
-  <script>
-    setTimeout(function () {
-      window.location.href = '../kosher';
-    }, 1200000);
-  </script>
+  
 </body>
 
 </html>
