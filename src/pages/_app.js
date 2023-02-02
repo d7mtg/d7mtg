@@ -7,6 +7,7 @@ import { Inter } from '@next/font/google'
 import { initialize } from 'config/firebase.config'
 import Head from 'next/head'
 import Script from 'next/script'
+import { Analytics as VercelAnalytics } from '@vercel/analytics/react'
 
 import 'styles/reset.css'
 import 'lightgallery/css/lightgallery.css'
@@ -110,5 +111,6 @@ const Analytics = ({ google, clarity }) => {
                 })(window, document, "clarity", "script", "${clarity}");
             `}
         </Script>
+        <VercelAnalytics />
     </>
 }

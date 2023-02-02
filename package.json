@@ -19,6 +19,7 @@
         "@hookform/resolvers": "^2.9.10",
         "@next/font": "^13.0.5",
         "@seznam/compose-react-refs": "^1.0.6",
+        "@vercel/analytics": "^0.1.8",
         "clsx": "^1.2.1",
         "firebase": "^9.14.0",
         "lightgallery": "^2.7.0",
