@@ -53,7 +53,15 @@
         gtag('js', new Date());
         gtag('config', 'G-2D8Q5R25WZ');
     </script>
-
+    <!-- Cal element-click embed code begins -->
+    <script type="text/javascript">
+        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+        Cal("init", {origin:"https://app.cal.com"});
+        
+        // Important: Make sure to add `data-cal-link="d7mtg/30min"` attribute to the element you want to open Cal on click
+        Cal("ui", {"styles":{"branding":{"brandColor":"#ffd708"}},"hideEventTypeDetails":false});
+        </script>
+        <!-- Cal element-click embed code ends -->
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="/contact/main.css">
 </head>
@@ -138,13 +146,12 @@
             </div>
         </a> -->
 
-        <div class="app" id="divcalendar" data-cal-link="d7mtg/30min">
-            <img class="appicon" id="calendar" alt="Schedule a 30 minute meeting with D7mtg">
+        <div class="app" id="divcalendar">
+            <img class="appicon" id="calendar"  data-cal-link="d7mtg/30min" alt="Schedule a 30 minute meeting with D7mtg">
             <p id="month">JUL</p>
             <p id="day">17</p>
             <p class="appname" id="calendarappname">Calendar</p>
         </div>
-        
         <div class="app" id="divsettings" onclick="opensettings()">
             <img class="appicon" id="settings" alt="Settins icon">
             <p class="appname" id="settingsappname">Settings</p>
@@ -218,49 +225,7 @@
         <a class="footer_label" href="/kosher/"><i class="fa-light fa-file-certificate"></i>&nbsp;Kosher Project</a>
     </p>
     <script src="/contact/main.js"></script>
-    <!-- Cal element-click embed code begins -->
-    <script type="text/javascript">
-        (function (C, A, L) {
-            let p = function (a, ar) {
-                a.q.push(ar);
-            };
-            let d = C.document;
-            C.Cal = C.Cal || function () {
-                let cal = C.Cal;
-                let ar = arguments;
-                if (!cal.loaded) {
-                    cal.ns = {};
-                    cal.q = cal.q || [];
-                    d.head.appendChild(d.createElement("script")).src = A;
-                    cal.loaded = true;
-                }
-                if (ar[0] === L) {
-                    const api = function () {
-                        p(api, arguments);
-                    };
-                    const namespace = ar[1];
-                    api.q = api.q || [];
-                    typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar);
-                    return;
-                }
-                p(cal, ar);
-            };
-        })(window, "https://app.cal.com/embed/embed.js", "init");
-        Cal("init", {
-            origin: "https://app.cal.com"
-        });
 
-        // Important: Make sure to add `data-cal-link="d7mtg/30min"` attribute to the element you want to open Cal on click
-        Cal("ui", {
-            "styles": {
-                "branding": {
-                    "brandColor": "#ffd708"
-                }
-            },
-            "hideEventTypeDetails": false
-        });
-    </script>
-    <!-- Cal element-click embed code ends -->
 </body>
 
 </html>
