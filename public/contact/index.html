@@ -8,7 +8,7 @@
     <link rel="apple-touch-icon" type="image/png" href="/photos/appleicon.png">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffd708">
-    
+
     <meta name="robots" content="index, follow">
     <meta name="revisit-after" content="1 days">
     <meta name="title" content="Contact us | D7mtg">
@@ -137,22 +137,14 @@
                 <p class="appname" id="d7mtgappname">D7mtg</p>
             </div>
         </a> -->
-      <!-- Cal element-click embed code begins -->
-<script type="text/javascript">
-    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-    Cal("init", {origin:"https://app.cal.com"});
-    
-    // Important: Make sure to add `data-cal-link="yitzchok-sabel-tzu5am/30min"` attribute to the element you want to open Cal on click
-    Cal("ui", {"styles":{"branding":{"brandColor":"#ffd708"}},"hideEventTypeDetails":true});
-    </script>
-    <!-- Cal element-click embed code ends -->
-        </a>
-        <div data-cal-link="yitzchok-sabel-tzu5am/30min  class="app" id="divcalendar">
+
+        <div class="app" id="divcalendar" data-cal-link="d7mtg/30min">
             <img class="appicon" id="calendar" alt="Schedule a 30 minute meeting with D7mtg">
             <p id="month">JUL</p>
             <p id="day">17</p>
             <p class="appname" id="calendarappname">Calendar</p>
         </div>
+        
         <div class="app" id="divsettings" onclick="opensettings()">
             <img class="appicon" id="settings" alt="Settins icon">
             <p class="appname" id="settingsappname">Settings</p>
@@ -183,7 +175,7 @@
                     <img class="OSchangeimg" src="/contact/OS/windows.png" alt="windows">
                     <p class="OSchangetext">Windows</p>
                 </div>
-               
+
             </div>
             <div class="divider copyrightdivider"></div>
             <!-- <p class="popuptext" id="settingsModeText">Your device is set to <span id="modename">Dark mode</span>.</p>
@@ -199,33 +191,76 @@
                 </div> 
             </div>
                 <div class="divider copyrightdivider"></div> -->
-            <p class="popuptext" class="copyright">&copy; Copyright 
+            <p class="popuptext" class="copyright">&copy; Copyright
                 <!-- add year -->
                 <script>
                     var d = new Date();
                     document.write(d.getFullYear());
                 </script>
-                 D7mtg. All rights reserved.
+                D7mtg. All rights reserved.
         </div>
     </div>
-        <h2 class='thinline'>&nbsp;</h2>
+    <h2 class='thinline'>&nbsp;</h2>
 
-        <p id="lighter" itemscope itemtype="http://schema.org/LocalBusiness">
-            <span itemprop="name">D7mtg</span> is a branding agency based in Brooklyn, N.Y.
-            <br><br>
-            Reach us at <a href='mailto:hello@d7mtg.com'>hello@d7mtg.com</a> or by phone at <a itemprop="telephone"
-                href='tel:+18456712116'>845-671-2116</a>. We're located at <a itemprop="address"
-                href="https://maps.apple.com/?q=d7mtg">63
-                Flushing Avenue</a> Building 27 in the Brooklyn Navy Yard.
-            <br><br>
-            <a class="footer_label" href="/"><i class="fa-light fa-hand-wave"></i>&nbsp;Home</a>
-            <a class="footer_label" href="/portfolio/"><i class="fa-light fa-folder-open"></i>&nbsp;Portfolio</a>
-            <a class="footer_label" href="/contact/"><i class="fa-light fa-envelope"></i>&nbsp;Contact us</a>
-            <a class="footer_label" href="https://instagram.com/d7mtg"><i class="fab fa-instagram"></i>&nbsp;Instagram</a>
-            <a class="footer_label" href="/aleph/V2/"><i class="fa-light fa-paragraph-rtl"></i>&nbsp;Aleph Project</a>
-            <a class="footer_label" href="/kosher/"><i class="fa-light fa-file-certificate"></i>&nbsp;Kosher Project</a>
-        </p>
+    <p id="lighter" itemscope itemtype="http://schema.org/LocalBusiness">
+        <span itemprop="name">D7mtg</span> is a branding agency based in Brooklyn, N.Y.
+        <br><br>
+        Reach us at <a href='mailto:hello@d7mtg.com'>hello@d7mtg.com</a> or by phone at <a itemprop="telephone"
+            href='tel:+18456712116'>845-671-2116</a>. We're located at <a itemprop="address"
+            href="https://maps.apple.com/?q=d7mtg">63
+            Flushing Avenue</a> Building 27 in the Brooklyn Navy Yard.
+        <br><br>
+        <a class="footer_label" href="/"><i class="fa-light fa-hand-wave"></i>&nbsp;Home</a>
+        <a class="footer_label" href="/portfolio/"><i class="fa-light fa-folder-open"></i>&nbsp;Portfolio</a>
+        <a class="footer_label" href="/contact/"><i class="fa-light fa-envelope"></i>&nbsp;Contact us</a>
+        <a class="footer_label" href="https://instagram.com/d7mtg"><i class="fab fa-instagram"></i>&nbsp;Instagram</a>
+        <a class="footer_label" href="/aleph/V2/"><i class="fa-light fa-paragraph-rtl"></i>&nbsp;Aleph Project</a>
+        <a class="footer_label" href="/kosher/"><i class="fa-light fa-file-certificate"></i>&nbsp;Kosher Project</a>
+    </p>
     <script src="/contact/main.js"></script>
+    <!-- Cal element-click embed code begins -->
+    <script type="text/javascript">
+        (function (C, A, L) {
+            let p = function (a, ar) {
+                a.q.push(ar);
+            };
+            let d = C.document;
+            C.Cal = C.Cal || function () {
+                let cal = C.Cal;
+                let ar = arguments;
+                if (!cal.loaded) {
+                    cal.ns = {};
+                    cal.q = cal.q || [];
+                    d.head.appendChild(d.createElement("script")).src = A;
+                    cal.loaded = true;
+                }
+                if (ar[0] === L) {
+                    const api = function () {
+                        p(api, arguments);
+                    };
+                    const namespace = ar[1];
+                    api.q = api.q || [];
+                    typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar);
+                    return;
+                }
+                p(cal, ar);
+            };
+        })(window, "https://app.cal.com/embed/embed.js", "init");
+        Cal("init", {
+            origin: "https://app.cal.com"
+        });
+
+        // Important: Make sure to add `data-cal-link="d7mtg/30min"` attribute to the element you want to open Cal on click
+        Cal("ui", {
+            "styles": {
+                "branding": {
+                    "brandColor": "#ffd708"
+                }
+            },
+            "hideEventTypeDetails": false
+        });
+    </script>
+    <!-- Cal element-click embed code ends -->
 </body>
 
 </html>
