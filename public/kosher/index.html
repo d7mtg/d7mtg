@@ -19,18 +19,11 @@
   <link rel="manifest" href="manifest.json">
   <script src="https://kit.fontawesome.com/f383a529e7.js" crossorigin="anonymous"></script>
   <link href="https://use.typekit.net/czh2ozp.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <script type="text/javascript">
-    (function (c, l, a, r, i, t, y) {
-      c[a] = c[a] || function () {
-        (c[a].q = c[a].q || []).push(arguments)
-      };
-      t = l.createElement(r);
-      t.async = 1;
-      t.src = "https://www.clarity.ms/tag/" + i;
-      y = l.getElementsByTagName(r)[0];
-      y.parentNode.insertBefore(t, y);
-    })(window, document, "clarity", "script", "9yg6bsle5u");
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">  
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2D8Q5R25WZ"></script>
@@ -132,7 +125,6 @@
       opacity: 0.3;
       margin-bottom: 0px;
       max-width: 300px;
-      line-height: 1px;
     }
 
     .kosherDownload {
@@ -195,19 +187,21 @@
     body {
       color: #2A2929;
       background: #FCFCFC;
-      font-family: SF Display, sans-serif;
+      font-family: 'Inter', sans-serif;
+
       transition: 0.3s;
     }
 
     h1 {
       padding-top: 50px;
-      font-size: 3em;
+      font-size: 2em;
       font-weight: 700;
       margin: auto;
       max-width: 70%;
       width: 900px;
       text-align: center;
       line-height: .83em;
+      letter-spacing: -1px;
     }
 
     #centertext {
@@ -254,7 +248,7 @@
       margin-left: 15%;
       margin-right: 15%;
       border: none;
-      border: 3px solid rgba(128, 128, 128, 0.3);
+      border: 3px solid rgba(160, 160, 160, 0.3);
       line-height: 2em;
       outline: none;
       padding: 12px 20px;
@@ -267,6 +261,10 @@
     }
 
     #searchbar:focus {
+      border: 3px solid rgba(128, 128, 128, 0.5);
+    }
+
+    #searchbar:hover{
       border: 3px solid rgba(128, 128, 128, 0.5);
     }
 
