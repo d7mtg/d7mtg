@@ -70,6 +70,7 @@ const Meta = () => {
             content="Your branding project starts here. We apply research and creativity to help you grow your brand and tell the world your story." />
         <meta key="ogdescription" property="og:description"
             content="Your branding project starts here. We apply research and creativity to help you grow your brand and tell the world your story." />
+        <meta property="og:logo" content="/d7mtg_logo.png"/>
         <meta name="author" content="D7mtg" />
         <meta name="copyright" content="D7mtg" />
         <meta key="ogimage" property="og:image" content="/ogpreview.png" />
