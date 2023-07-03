@@ -37,7 +37,7 @@ svg, i{
     padding: 10px;
     height: 75px;
 
-    border-radius: 10px;
+    border-radius: 20px;
     display: inline-table;
     margin: 25px;
     transition: .2s;
@@ -179,7 +179,7 @@ h2 {
     box-shadow: 0px 10px 30px var(--slate-200);
 
 
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 10px;
     font-size: 1.2em;
     outline: none;
@@ -263,7 +263,6 @@ p {
     display: block;
     margin-top: 45px;
     /* make it black */
-    filter: brightness(0%);
 }
 
 .downloadbutton {
@@ -288,7 +287,7 @@ p {
     line-height: 5em;
     margin: auto;
     display: block;
-    border-radius: 10px;
+    border-radius: 15px;
     
     text-decoration: none;
     text-align: center;
