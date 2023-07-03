@@ -288,13 +288,13 @@ p {
     line-height: 5em;
     margin: auto;
     display: block;
-    border-radius: 5px;
+    border-radius: 10px;
     
     text-decoration: none;
     text-align: center;
     /* center */
     left: 0;
-    right: 0; 
+    right: 0;
     
 
 
