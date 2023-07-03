@@ -369,7 +369,7 @@ p:not(.tag):not(.tag2) {
   background-size: cover;
   background-position: center;
   /* parralex */
-    color: #E2E2E2;
+    color: #ffffff;
   transition: .25s;
 
 }
@@ -649,7 +649,7 @@ svg{
     /* margin-top: 15px; */
     height: fit-content;
     /* border-radius: 7.5px; */
-    color: #E2E2E2;
+    color: #ffffff;
     transition: .25s;
     }
     .project_inner_container {
