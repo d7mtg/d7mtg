@@ -301,6 +301,7 @@ p {
     background-color:rgba(31, 41, 59, 0.091);
     border: 1px solid rgba(255, 255, 255, 0.262);
     -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
 
 }
 
