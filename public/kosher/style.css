@@ -294,12 +294,14 @@ p {
     text-align: center;
     /* center */
     left: 0;
-    right: 0;
-    /* glass effect backdrop blur */
-    backdrop-filter: blur(20px);
-    background-color:rgba(31, 41, 59, 0.091)    ;
-    border: 1px solid rgba(255, 255, 255, 0.262) inset;
+    right: 0; 
+    
 
+
+    
+    background-color:rgba(31, 41, 59, 0.091);
+    border: 1px solid rgba(255, 255, 255, 0.262);
+    -webkit-backdrop-filter: blur(20px);
 
 }
 
