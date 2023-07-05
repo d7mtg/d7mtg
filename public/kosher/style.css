@@ -26,25 +26,14 @@ body,
     font-weight: 300;
 }
 
-svg, i{
+svg,
+i {
     color: var(--slate-400);
     transition: .2s;
 
 }
-/*KOSHER*/
-.kosherBox {
-    border: 2px solid var(--slate-200);
-    max-width: 70%;
-    width: 350px;
-    padding: 10px;
-    height: 75px;
 
-    border-radius: 20px;
-    display: inline-table;
-    margin: 25px;
-    transition: .2s;
-}
-.allportfolio{
+.allportfolio {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -54,57 +43,103 @@ svg, i{
     width: 100%;
 }
 
-.kosherPNG {
-    height: 55px;
-    width: 55px;
-    padding: 10px;
+/*KOSHER*/
+.kosherBox {
+    border: 2px solid var(--slate-200);
+    border-radius: 30px;
 
-    float: left;
-    border-radius: 5px;
-    margin-right: 20px;
-    transition: .3s;
-    /* multiply */
+    padding: 10px;
+    height: 250px;
+
+    width: 200px;
+    position: relative;
+    margin: 15px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+
+.kosherPNG {
+    width: 50px;
     mix-blend-mode: multiply;
+    margin: auto;
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
 }
 
 .kosherTitle {
-    display: inline;
-    font-size: 105%;
+    font-size: 1.2em;
     font-weight: 700;
+    margin-bottom: 5px;
+    border-top: 1px solid var(--slate-200);
+    margin-block-start: 0;
+    padding-top: 25px;
+    text-align: center;
+    margin-top: 25px;
 }
 
 .kosherText {
-    font-size: .2em;
+    font-size: .5em;
+    font-weight: 400;
+    max-width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
     opacity: 0.3;
-    margin-bottom: 0px;
-    max-width: 300px;
+
+
 }
 
 .kosherDownload {
-    float: right;
-    border: none;
-    height: 75px;
-    width: 75px;
+    width: calc(100% - 30px);
+
+    height: 50px;
+   
+
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: 700;
     outline: none;
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    background-color: var(--slate-50);
-    color: var(--slate-400);
-    font-size: 1.1em;
-    display: block;
-    border-radius: 5px;
-    transition: .4s;
-    z-index: 100;
+    transition: .2s;
+    border: none;
+    /* complete bottom of container */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 15px;
+
     cursor: pointer;
-}
-
-
-.kosherDownload:hover i {
+    opacity: 0; 
+    transition: .2s;
+    box-shadow: 0px 10px 30px var(--slate-200);
+    background-color: var(--slate-50);
     color: var(--slate-800);
-        
+
+
 
 }
+
+.kosherBox:hover .kosherDownload {
+    opacity: 1;
+}
+
+.kosherBox:hover {
+   background-color: var(--slate-100);
+   color: var(--slate-500);
+   
+}
+
+.kosherBox:hover .kosherPNG {
+   opacity: 0.5;
+}
+
+
 
 
 
@@ -280,26 +315,26 @@ p {
 
 .SubmitFooter {
     width: calc(100% - 50px);
-    
+
     font-weight: 700;
-    
+
     position: fixed;
     bottom: 25px;
     line-height: 5em;
     margin: auto;
     display: block;
     border-radius: 15px;
-    
+
     text-decoration: none;
     text-align: center;
     /* center */
     left: 0;
     right: 0;
-    
 
 
-    
-    background-color:rgba(31, 41, 59, 0.091);
+
+
+    background-color: rgba(31, 41, 59, 0.091);
     border: 1px solid rgba(255, 255, 255, 0.262);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
@@ -396,6 +431,10 @@ p {
 
 
 @media only screen and (max-width: 600px) {
+    .kosherDownload {
+        opacity: 1;
+    }
+    
  
 
     h1 {
@@ -431,7 +470,7 @@ p {
         margin-bottom: 0px;
     }
 
-  
+
     #logo {
         max-width: 82.5%;
         margin-top: 25px;
@@ -440,7 +479,7 @@ p {
 }
 
 
-/* 
+/*
 
 @media (prefers-color-scheme: dark) {
 

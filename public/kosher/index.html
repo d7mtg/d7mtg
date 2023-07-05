@@ -722,7 +722,7 @@
       button.type = "button";
       button.name = "button";
       //setting atrributes for svg
-      svg.className = "fas fa-cloud-arrow-down"
+      svg.className = " fas fa-cloud-arrow-down"
     
       //setting atrributes for paragraphs
       title.className = "kosherTitle";
@@ -733,12 +733,13 @@
       english.textContent = object.englishtext
       //set up html tree
       div.append(image)
-      div.append(link)
       div.append(title)
       div.append(yiddish)
       div.append(english)
       link.append(button)
-      button.append(svg)
+      button.append("Download")
+      div.append(link)
+
       return (div)
     }
     let container = document.querySelector(".allportfolio")
