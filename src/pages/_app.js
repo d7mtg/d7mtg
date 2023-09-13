@@ -42,6 +42,7 @@ function MyApp({ Component, pageProps }) {
     return <main className={inter.className} id='root'>
         <Meta />
         <Analytics google='G-2D8Q5R25WZ' clarity='9yg6bsle5u' />
+        <JsonLD />
 
         <Component {...pageProps} />
     </main>
@@ -115,3 +116,19 @@ const Analytics = ({ google, clarity }) => {
         <VercelAnalytics />
     </>
 }
+
+const JsonLD = () => <Script type='application/ld+json' strategy='beforeInteractive' id='json-ld'>
+    {`{
+            "@context": "http://schema.org",
+            "@type": "LocalBusiness",
+            "name": "D7mtg",
+            "image": "https://d7m.tg/ogpreview.png",
+            "telephone": "845-671-2116",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "63 Flushing Avenue Building 27",
+                "addressLocality": "Brooklyn NY 11205",
+                "addressCountry": "USA"
+            }
+        }`}
+</Script>
