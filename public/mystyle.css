@@ -48,7 +48,7 @@ body {
   min-height: 100vh;
  
   padding-bottom: 50px;
-  background-color: #ffd708;
+  background-color: #F9FAFB;
 
 }
 
@@ -232,8 +232,8 @@ p:not(.tag):not(.tag2) {
   margin-right: auto;
   
  
-  background: #ffd708;
-  color: #2A2929;
+  background: ##9FAFB;
+  color: #475467;
   font-size: 1em;
   
   text-align: center;
