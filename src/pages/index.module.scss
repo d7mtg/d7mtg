@@ -5,7 +5,7 @@
 .banner {
     min-height: 100vh;
     padding-bottom: 50px;
-    background-color: $primary;
+    background-color: #F9FAFB;
 
     @include md {
         min-height: 700px;
@@ -97,8 +97,8 @@
     margin-left: auto;
     margin-right: auto;
 
-    background: $primary;
-    color: $black;
+    background: #F9FAFB;
+    color: #475467;
     font-size: 1em;
 
     text-align: center;
