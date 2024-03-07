@@ -9,7 +9,7 @@
     background-image: linear-gradient(rgba(226, 228, 232, .7), transparent .1em),
                       linear-gradient(90deg, rgba(226, 228, 232, .7), transparent .1em);
     background-size: 3em 3em;
-
+    background-color: #F9FAFB;
     @include md {
         min-height: 700px;
     }
