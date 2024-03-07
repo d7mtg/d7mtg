@@ -3,14 +3,28 @@
 @import "~theme/screens";
 
 .banner {
+    position: relative;
     min-height: 100vh;
     padding-bottom: 50px;
-    background-color: #F9FAFB;
+    background-image: linear-gradient(rgba(226, 228, 232, .7), transparent .1em),
+                      linear-gradient(90deg, rgba(226, 228, 232, .7), transparent .1em);
+    background-size: 3em 3em;
 
     @include md {
         min-height: 700px;
     }
-}
+  }
+  
+  .banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(circle at center, rgba(246, 248, 250, 0) 50%, #F9FAFB 100%);
+  }
+
 
 .topbar {
     display: flex;
@@ -97,7 +111,7 @@
     margin-left: auto;
     margin-right: auto;
 
-    background: #F9FAFB;
+    background: none;
     color: #475467;
     font-size: 1em;
 
