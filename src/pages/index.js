@@ -40,9 +40,9 @@ const Banner = () => {
         </div>
 
         <p className={s.header}>
-            A branding and web agency in Brooklyn.
+            A UX and web agency in Brooklyn.
             <br /><br />
-            <span className={s.subheader}>D7mtg helps founders build brands that are memorable by design.</span>
+            <span className={s.subheader}>D7mtg designes software that is a joy to use.</span>
         </p>
         <div className={s.scrollDown}>
             <FontAwesomeIcon icon={['fas', 'arrow-down']} />
