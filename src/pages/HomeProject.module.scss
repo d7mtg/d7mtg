@@ -9,12 +9,13 @@
     background-position: center;
     padding: 150px 15%;
 
-    color: $gray-300;
+    color: white;
     transition: 0.25s;
 
     svg {
         margin-right: 5px;
         font-size: 0.9em;
+        margin-left: 5px;
     }
 
     h3 {
@@ -25,7 +26,8 @@
     }
 
     h4 {
-        opacity: 0.5;
+        mix-blend-mode: plus-lighter;
+        color: #363636;
         font-weight: 500;
         font-size: 0.9em;
         text-transform: uppercase;
@@ -104,7 +106,7 @@
 
     /* border soft gradient */
     border: 1px solid rgba(255, 255, 255, 0.171);
-    border-radius: 5px;
+    border-radius: 14px;
     background: rgba(255, 255, 255, 1);
 
     color: black;
