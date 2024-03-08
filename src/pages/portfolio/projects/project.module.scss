@@ -61,19 +61,19 @@
         display: flex;
         align-items: center;
         gap: 10px;
-
-        background-color: rgba(167, 167, 167, 0.3);
-        border: 1px solid rgba(167, 167, 167, 0.4);
-        border-radius: 5px;
+        background-color: hsl(0deg 0% 65% / 7%);
+        border: 1px solid hsl(0deg 0% 65% / 15%);
+        border-radius: 12px;
         letter-spacing: 1px;
         text-transform: uppercase;
         padding: 7px 10px;
         font-weight: 500;
-        font-size: 0.6em;
-        color: rgb(138, 138, 138);
+        font-size: .8em;
+        color: #475668;
 
         @include dark {
             background-color: rgba(96, 96, 96, 0.3);
+            color: #F9FBFC;
         }
     }
 }
@@ -91,7 +91,7 @@
         border: none;
         padding: 1em;
         transition: 0.2s;
-        border-radius: 5px;
+        border-radius: 16px;
         background-color: #ffffff;
         color: #2a2a2a;
         box-shadow: var(--shadow-elevation-low);
@@ -103,7 +103,7 @@
         @include dark {
             color: $gray;
             background-color: #333333;
-            border: 1px solid #555555;
+            border: 1px solid #55555593;
         }
     }
 }
