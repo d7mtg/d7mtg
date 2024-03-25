@@ -21,9 +21,7 @@ export const Footer = () => {
             <a href="/contact/">
                 <FontAwesomeIcon icon={['fal', 'envelope']} />&nbsp;Contact us
             </a>
-            <a href="https://instagram.com/d7mtg">
-                <FontAwesomeIcon icon={['fab', 'instagram']} />&nbsp;Instagram
-            </a>
+          
             <a href="/aleph/V2/">
                 <FontAwesomeIcon icon={['fal', 'paragraph-rtl']} />&nbsp;Aleph Project
             </a>
