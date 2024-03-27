@@ -35,6 +35,7 @@ const inter = Inter({
     display: 'swap'
 })
 
+
 initialize()
 
 
@@ -64,22 +65,22 @@ const Meta = () => {
         <meta name="language" content="English" />
         <meta name="robots" content="index, follow" />
         <meta name="revisit-after" content="1 days" />
-        <title>D7mtg Branding Agency</title>
-        <meta name="title" content="D7mtg Branding Agency" />
-        <meta key="ogtitle" property="og:title" content="D7mtg Branding Agency" />
+        <title>D7mtg | UX and web design</title>
+        <meta name="title" content="D7mtg | UX and web design" />
+        <meta key="ogtitle" property="og:title" content="D7mtg | UX and web design" />
         <meta key='description' name="description"
-            content="Your branding project starts here. We apply research and creativity to help you grow your brand and tell the world your story." />
+            content="We design software that is a joy to use." />
         <meta key="ogdescription" property="og:description"
-            content="Your branding project starts here. We apply research and creativity to help you grow your brand and tell the world your story." />
+            content="We design software that is a joy to use." />
         <meta property="og:logo" content="/d7mtg_logo.png"/>
         <meta name="author" content="D7mtg" />
         <meta name="copyright" content="D7mtg" />
         <meta key="ogimage" property="og:image" content="/ogpreview.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@d7mtg" />
-        <meta key='twittertitle' name="twitter:title" content="D7mtg Branding Agency" />
+        <meta key='twittertitle' name="twitter:title" content="D7mtg | UX and web design" />
         <meta key='twitterdescription' name="twitter:description"
-            content="D7mtg is a branding agency in Brooklyn that thrives on helping brands achieve clarity." />
+            content="We design software that is a joy to use" />
         <meta key='twitterimage' name="twitter:image" content="/photos/twittercard.png" />
         <meta name="yandex-verification" content="6377e7342037f015" />
     </Head>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Shuffle</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;300;500;700;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/e4d6438e48.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="favicon.png" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+
+
+  <div id="logo">
+  <!-- Generator: Adobe Illustrator 25.0.1, SVG Export Plug-In  -->
+  <svg id="logosvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590.13 151.57"><defs><style>.cls-1{fill:#59c3e7;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M180.07,145.64a44.47,44.47,0,0,1-18.58-3.6,28.24,28.24,0,0,1-12.2-10.12,27.3,27.3,0,0,1-4.3-15.39h20.8a9.6,9.6,0,0,0,4,8.11q3.94,3,10.74,3,6.51,0,10.19-2.91a9.68,9.68,0,0,0,3.67-8,11.24,11.24,0,0,0-2.77-7.63,14,14,0,0,0-7.76-4.29l-10.26-2.36q-12.9-3-20-11.3t-7.14-20.17a28.69,28.69,0,0,1,4.09-15.46A27.15,27.15,0,0,1,162,45.27a40.59,40.59,0,0,1,17.75-3.6q15.53,0,24.6,7.69t9.08,20.73H192.68a9.3,9.3,0,0,0-3.4-7.63q-3.39-2.76-9.77-2.77-6,0-9.15,2.7a9.54,9.54,0,0,0-3.19,7.7,11.49,11.49,0,0,0,2.57,7.55A12.88,12.88,0,0,0,177,81.87l10.81,2.5q13.44,3,20.38,11t6.93,20.31a28.32,28.32,0,0,1-4.37,15.66,29,29,0,0,1-12.2,10.54A42.59,42.59,0,0,1,180.07,145.64Z"/><path class="cls-1" d="M220.25,144.25V43.06h20.8V68l-.7,14.56h6.1l-6.1,4.85q0-9.7,5.55-15.25t15-5.55q11.08,0,17.81,7.77T285.41,95v49.21h-20.8V97.12q0-6-3.12-9.22t-8.8-3.26q-5.55,0-8.59,3.26t-3,9.22v47.13Z"/><path class="cls-1" d="M324.32,145.64q-15.39,0-24.06-8.32t-8.66-22.73V68h20.79v46.44q0,6.38,3.05,9.77c2,2.27,5,3.4,8.88,3.4s6.72-1.13,8.8-3.4,3.12-5.52,3.12-9.77V68H357v46.58q0,14.55-8.73,22.8T324.32,145.64Z"/><path class="cls-1" d="M383.39,144.25V95.73H363.15V77h20.24V66.62q0-10.67,7.27-17.12t19.07-6.44H432v18H410.42a5.93,5.93,0,0,0-6.24,6.24V77H432V95.73H404.18v48.52Z"/><path class="cls-1" d="M437,144.25V95.73H416.76V77H437V66.62Q437,56,444.27,49.5t19.07-6.44h22.31v18H464a5.93,5.93,0,0,0-6.24,6.24V77h27.86V95.73H457.79v48.52Z"/><rect class="cls-1" x="495.62" y="43.06" width="20.79" height="101.2"/><path class="cls-1" d="M557,145.64a38.8,38.8,0,0,1-17.68-3.81,27.71,27.71,0,0,1-11.64-10.68,30.63,30.63,0,0,1-4.09-16v-18a30.63,30.63,0,0,1,4.09-16,27.75,27.75,0,0,1,11.64-10.67A38.67,38.67,0,0,1,557,66.62a37.84,37.84,0,0,1,17.54,3.82A28,28,0,0,1,586,81.11a30.63,30.63,0,0,1,4.09,16V111H543.41v4.16q0,7.22,3.47,10.88t10.4,3.68a16,16,0,0,0,7.83-1.67,8.07,8.07,0,0,0,3.95-4.57h20.38a27.09,27.09,0,0,1-11.3,16.08Q569.34,145.65,557,145.64Zm13.31-45.33V96.84q0-7.07-3.26-10.81t-10-3.74q-6.79,0-10.19,3.88t-3.4,11V99.2l28.28-.28Z"/><path class="cls-1" d="M114,29.86h-9.16l-1.23-8.12A12,12,0,0,0,89.92,11.66L78.42,13.4,76.24,7.72A12,12,0,0,0,60.71.8l-53,20.35A12,12,0,0,0,.8,36.68L26.46,103.5,16.07,35A12,12,0,0,1,26.15,21.34l7.58-1.15a12,12,0,0,0-10,13.67l14.4,95V41.88a12,12,0,0,1,12-12h7.09a12,12,0,0,0-12,12v97.67a12,12,0,0,0,12,12H114a12,12,0,0,0,12-12V41.88A12,12,0,0,0,114,29.86Z"/></g></g></svg>
+</div>
+
+  <div id="all">
+    <h1>Shuffle a name</h1>
+
+    <div id="showsettings">
+      <p onclick="opencustomization()">Show settings</p>
+    </div>
+
+    <div id="outercustomization">
+      <div id="mydivheader"></div>
+
+      <p id="x" onclick="closecustomization()"><i class="far fa-times"></i></p>
+
+      <div id="customization">
+
+        <div class="customizationobject" id="normalcydiv">
+
+          <p>Normalcy</p>
+          <input type="radio" id="random" name="normalcy" value="random">
+          <label for="random"><i class="far fa-random"></i>&nbsp;Random</label>
+
+          <input type="radio" id="normal" name="normalcy" value="normal" checked>
+          <label for="normal"><i class="far fa-users"></i>&nbsp;Normal</label>
+
+          <input type="radio" id="weird" name="normalcy" value="weird">
+          <label for="weird"><i class="far fa-meh-blank"></i>&nbsp;Weird</label>
+        </div>
+
+        <div class="customizationobject" id="genderdiv">
+
+          <p>Gender</p>
+          <input type="radio" id="random" name="gender" value="random" checked>
+          <label for="random"><i class="far fa-random"></i>&nbsp;Random</label>
+
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male"><i class="far fa-mars"></i>&nbsp;Male</label>
+
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female"><i class="far fa-venus"></i>&nbsp;Female</label>
+
+        </div>
+
+        <div class="customizationobject" id="genderdiv">
+
+          <p>Religion</p>
+          <input type="radio" id="random" name="religion" value="random">
+          <label for="random"><i class="far fa-random"></i>&nbsp;Random</label>
+
+          <input type="radio" id="jewish" name="religion" value="jewish" checked>
+          <label for="jewish"><i class="far fa-menorah"></i>&nbsp;Jewish</label>
+
+          <input type="radio" id="nonjewish" name="religion" value="nonjewish">
+          <label for="nonjewish"><i class="far fa-hat-santa"></i>&nbsp;Non-Jewish</label>
+
+        </div>
+
+        <div class="customizationobject" id="otherdiv">
+
+          <p>Date of Birth</p>
+          <input type="radio" id="optionone" name="other" value="optionone" disabled>
+          <label for="optionone"><i class="far fa-hourglass-start"></i>&nbsp;1890+</label>
+
+          <input type="radio" id="option2" name="other" value="option2" disabled>
+          <label for="option2"><i class="far fa-hourglass-half"></i>&nbsp;1940+</label>
+
+          <input type="radio" id="optionthree" name="other" value="optionthree" disabled>
+          <label for="optionthree"><i class="far fa-hourglass-end"></i>&nbsp;1980+</label>
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <button id="go" type="button" name="button" onclick="getresult()">GO</button>
+    <h3 id='nameresult'>Name Result</h3>
+    
+
+
+  </div>
+
+<div class="code">
+  <p>
+
+    ../D7MTG/SHUFFLE/DIAGNOSTICS_REPORT<br>
+    <span class='labelbold'>STATUS:</span> <span id="blink">•</span>ONLINE <br>
+    <span class='labelbold'>SETTINGS:</span> <span id="currentsettings">DEFAULT</span><br>
+    <span class='labelbold'>RESULTS: </span> <span id="currentresults">N/A</span><br>
+
+    <span class='labelbold'>OBJECTS SHUFFLED:</span> <span id="objectsshuffled">0000</span><br>
+    <span class='labelbold'>BINARY:</span> <span id="binary">N/A</span><br>
+    <span class='labelbold'>CHAR_CODE:</span> <span id="charcode">N/A</span><br>
+
+
+  </p>
+</div>
+
+
+  <script type="text/javascript" src="main.js"></script>
+
+</body>
+
+
+
+</html>

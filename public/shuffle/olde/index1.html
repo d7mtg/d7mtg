@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Shuffle.ai</title>
+
+      <style>
+          
+          h1{ 
+             margin-top: 100px;
+
+              font-family: sans-serif;
+              text-align: center;
+              
+          }
+          
+          
+          
+          button{
+              
+              background: white;
+              height: 150px;
+              width: 150px;
+              margin: auto;
+              display: block;
+              border-radius: 100px;
+              border: 15px solid #1DBC7F;
+              color: #1DBC7F;
+              font-size: 3em;
+              font-weight: 700;
+              margin-top: 100px;
+              transition: 0.2s ease-in;
+              cursor: pointer;
+              
+          }
+          
+          button:active{
+                   border: 15px solid #124949;
+              color: #124949;
+
+          }
+          
+          h3{
+              font-family: sans-serif;
+              text-align: center;
+              color: #1DBC7F;
+              font-size: 2em;
+
+          }
+          
+          .category{
+              color: gray;
+              font-family: monospace;
+              letter-spacing: 2px;
+          }
+      
+          #categorydiv{
+              display: block;
+              width: 200px;
+              margin: auto;
+          }
+          .categoryvalue{
+              font-weight: 1000;
+          }
+      </style>
+      
+  </head>
+
+  <body>
+
+
+
+
+<div class="all">
+<h1>Shuffle me a name!</h1>
+<button type="button" name="button" onclick="getresult()">Go!</button>
+<h3 id='nameresult'>Name Result</h3>
+    <div id="categorydiv">
+<p class="category" id="normalcy">Normalcy:</p>
+<p class="category" id="gender">Gender:</p>
+<p class="category" id="religion">Religion:</p>
+    
+</div>
+
+
+</div>
+
+<script>
+   var nameresult = document.getElementById("nameresult");
+   var normalcy = document.getElementById("normalcy");
+   var gender = document.getElementById("gender");
+   var religion = document.getElementById("religion");
+   var alternative = document.getElementById("alternative");
+
+    function getresult(){
+    
+var firstname;        
+var lastname;      
+        
+        
+var randomlist  = Math.floor(Math.random() * 4);
+var random1  = Math.floor(Math.random() * 5);
+var random2  = Math.floor(Math.random() * 5);
+
+ // first jewish normal male       
+var firstJewishNormalMaleList = {
+  name:["Yitzchok", "Jacob", "Moshe", "Chaim", "Hershy"],
+  religion:"jewish",
+  normalcy:"normal",
+  gender:"male"
+};
+    
+// first jewish weird male       
+        
+var firstJewishWeirdMaleList = {
+  name:["Ploiny", "Almoni", "Chagdi", "Gimpel", "Groinem"],
+  religion:"jewish",
+  normalcy:"weird",
+  gender:"male"
+};
+        
+
+        
+// first jewish normal female       
+     
+var firstJewishNormalFemaleList = {
+  name:["Sarah", "Rachel", "Esther", "Hindy", "Blima", "Rivka"],
+  religion:"jewish",
+  normalcy:"normal",
+  gender:"female"
+};
+     
+// first jewish weird female       
+        
+var firstJewishWeirdFemaleList = {
+  name:["Challah", "Krimet", "Shlomptzi", "Gela", "Tuna"],
+  religion:"jewish",
+  normalcy:"weird",
+  gender:"female"
+};
+        
+    
+        
+// last jewish normal        
+      
+var lastJewishNormalList = {
+  name:["Sabel", "Moskowics", "Roth", "Wieder", "Teitelbaum", "Spitzer", "Jacobs"],
+  religion:"jewish",
+  normalcy:"normal",
+};
+     
+        
+// last jewish weird        
+        
+var lastJewishWeirdList = {
+  name:["Shtreimel", "Friedom", "Velvet", "Upgrindt", "Milchuma"],
+  religion:"jewish",
+  normalcy:"weird",
+};
+        
+
+        
+
+
+
+  if (randomlist == 0){
+      firstname = firstJewishNormalMaleList;
+      lastname = lastJewishNormalList;
+ } else if (randomlist == 1){
+     firstname = firstJewishWeirdMaleList
+     lastname = lastJewishWeirdList;
+ } else if (randomlist == 2){
+     firstname = firstJewishWeirdFemaleList
+     lastname = lastJewishWeirdList;
+ } else if (randomlist == 3){
+     firstname = firstJewishNormalFemaleList
+     lastname = lastJewishNormalList;
+ }
+
+var returnedFirstName =  firstname.name[random1];
+var returnedLastName =  lastname.name[random2];
+
+    
+nameresult.innerHTML = returnedFirstName + " " + returnedLastName;
+normalcy.innerHTML = "Normalcy: <span class='categoryvalue'>" + firstname.normalcy + "</span>";
+gender.innerHTML = "Gender: <span class='categoryvalue'>" + firstname.gender + "</span>";
+religion.innerHTML = "Religion: <span class='categoryvalue'>" + firstname.religion + "</span>";
+
+
+    
+        
+        }
+    
+    addEventListener("keydown", function (e) {
+    if (e.keyCode === 13) {
+        getresult();
+    }
+});
+
+
+</script>
+
+
+  </body>
+
+
+
+</html>
