@@ -349,6 +349,6 @@ function rollDice() {
     }
     var dice = diceObj[Math.floor(Math.random() * 6)]
 
-    document.getElementById("dice").innerHTML = '<i class="fas fa-dice-' + dice + '" aria-hidden="true"></i>'
+    document.getElementById("dice").innerHTML = '<i class="fa-sharp fa-solid fa-dice-' + dice + '" aria-hidden="true"></i>'
 
 }
