@@ -52,7 +52,10 @@ function getresult() {
         returnedFullName = firstName.name + " " + lastName.name; //gets string of full name
 
         setTimeout(() => {
+            nameresult.style.display = "none";
+
                 nameresult.innerHTML = returnedFullName; //momemt of truth - places name into html
+
                 //history.pushState({
                 //	 id: 'shuffle'
                 //}, 'Shuffle', 'https://d7m.tg/shuffle/?name=' + firstName.name + '%20' + lastName.name);
@@ -76,10 +79,14 @@ function getresult() {
                 document.getElementById("isonline").innerHTML = "<span class='labelbold'>SYSTEM STATUS</span><span><span id='blink'> • </span>ONLINE </span>"; //shows online status
                 document.getElementById("isonline").className = "online"; //sets online status animation
                 document.getElementById("go").className = "inactiveGo"; //stops go animation
+                setTimeout(() => {
+                    nameresult.style.display = "block";
+                }, 10);
             },
-            Math.floor(Math.random() * 800) + 500 //gets random number 500ms to 1200ms, when the result function should run. I know, just making it longer.
+            Math.floor(Math.random() * 0) + 0 //gets random number 500ms to 1200ms, when the result function should run. I know, just making it longer.
         );
-    }
+
+    } 
 }
 
 function newpossible() {

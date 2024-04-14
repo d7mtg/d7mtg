@@ -56,8 +56,23 @@ html {
 #nameresult {
 
 	font-family: 'Miriam Libre', sans-serif;
+	animation: blurry .5s;
+	z-index: 100;
 
 }
+@keyframes blurry {
+	0% {
+	opacity: 0;
+	  filter: blur(25px);
+	}
+	
+
+	100% {
+		opacity: 100%;
+	  filter: blur(0);
+	}
+  }
+  
 
 #nameresult:focus {
 	background: rgba(16, 211, 255, 0.3);
