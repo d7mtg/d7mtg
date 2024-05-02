@@ -30,7 +30,6 @@ export default function Home({ projects }) {
 
 const Banner = () => {
     return <div className={s.banner}>
-
         <div className={s.topbar}>
             <Logo className={s.logo} black />
             <div className={s.menu}>
@@ -40,9 +39,10 @@ const Banner = () => {
         </div>
 
         <p className={s.header}>
-       We design software that is a joy to use.
+            We design software that is a joy to use.
             <br /><br />
             <span className={s.subheader}>D7mtg is a UX and web agency in Brooklyn.</span>
+            <span className={s.bounceDot}>.</span> 
         </p>
         <div className={s.scrollDown}>
             <FontAwesomeIcon icon={['fas', 'arrow-down']} />
@@ -50,6 +50,7 @@ const Banner = () => {
         </div>
     </div>
 }
+
 
 
 export const HomeProject = props => {
