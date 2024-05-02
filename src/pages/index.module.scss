@@ -25,6 +25,26 @@
     left: 0;
     background: radial-gradient(circle at center, rgba(246, 248, 250, 0) 50%, #F9FAFB 100%);
   }
+.bounceDot {
+    display: inline-block; // Ensure the span behaves correctly for transformations
+    animation: drop 1s cubic-bezier(0.1, -0.4, .8, .8) both; // Apply the bounce animation
+}
+
+@keyframes drop {
+    0% {
+        transform: translateY(-1000px);
+    }
+    80% {
+        transform: translateY(0px);
+    }
+    95% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 
 
 .topbar {
