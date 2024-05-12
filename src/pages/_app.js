@@ -60,6 +60,7 @@ const Meta = () => {
         <link rel="apple-touch-icon" type="image/png" href="/photos/appleicon.ico" />
         <link rel="apple-touch-icon" type="image/png" href="/photos/appleicon.png" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <script src="https://assets.usestyle.ai/seonajsplugin" defer id="seona-js-plugin"></script>
         <link href="/favicon.png" rel="shortcut icon" type="image/png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="language" content="English" />
