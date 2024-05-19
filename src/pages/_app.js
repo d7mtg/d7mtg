@@ -65,9 +65,9 @@ const Meta = () => {
         <meta name="language" content="English" />
         <meta name="robots" content="index, follow" />
         <meta name="revisit-after" content="1 days" />
-        <title>D7mtg | UX and web design</title>
-        <meta name="title" content="D7mtg | UX and web design" />
-        <meta key="ogtitle" property="og:title" content="D7mtg | UX and web design" />
+        <title>D7mtg | UX and Web Design Agency in Brooklyn, NY</title>
+        <meta name="title" content="D7mtg | UX and Web Design Agency in Brooklyn, NY" />
+        <meta key="ogtitle" property="og:title" content="D7mtg | UX and Web Design Agency in Brooklyn, NY" />
         <meta key='description' name="description"
             content="We design software that is a joy to use." />
         <meta key="ogdescription" property="og:description"
@@ -78,7 +78,7 @@ const Meta = () => {
         <meta key="ogimage" property="og:image" content="/ogpreview.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@d7mtg" />
-        <meta key='twittertitle' name="twitter:title" content="D7mtg | UX and web design" />
+        <meta key='twittertitle' name="twitter:title" content="D7mtg | UX and Web Design Agency in Brooklyn, NY" />
         <meta key='twitterdescription' name="twitter:description"
             content="We design software that is a joy to use" />
         <meta key='twitterimage' name="twitter:image" content="/photos/twittercard.png" />

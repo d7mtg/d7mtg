@@ -10,7 +10,7 @@ import p from './ProjectBlock.module.scss'
 export default function Portfolio({ projects }) {
     return <>
         <Head>
-            <title>D7mtg | Portfolio</title>
+            <title>D7mtg | Brooklyn UX Design Agency | Portfolio</title>
         </Head>
 
         <Header />
