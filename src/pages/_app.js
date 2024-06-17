@@ -8,7 +8,7 @@ import { initialize } from 'config/firebase.config'
 import Head from 'next/head'
 import Script from 'next/script'
 import { Analytics as VercelAnalytics } from '@vercel/analytics/react'
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import 'styles/reset.css'
 import 'lightgallery/css/lightgallery.css'
 import '@fortawesome/fontawesome-svg-core/styles.css'
