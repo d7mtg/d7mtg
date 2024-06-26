@@ -62,7 +62,7 @@ export const Blog = props => {
     useEffect(() => {
         const observer = new IntersectionObserver(e => {
             for (const entry of e) {
-                if (entry.isIntersecting) 
+                if (entry.isIntersecting)
                     setAnimated(prev => Math.max(prev, entry.target.dataset.index))
             }
         })
@@ -105,7 +105,7 @@ export const Blog = props => {
                 download={false}
                 getCaptionFromTitleOrAlt={false}
                 mousewheel>
-                {logo && <Image className={s.clientLogo} src={url(logo)} alt={logo.alt} width={logo.width} height={logo.height} />}
+                {logo && <Image className={s.clientLogo} src={url(logo)} alt={logo.alt} width={logo.width} height={logo.height} priority />}
 
                 {images?.map((i, index) => <Image
                     key={i.url}

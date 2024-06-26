@@ -110,7 +110,7 @@ export const HomeProject = props => {
         <div ref={ref} className={hp.project} id={'banner-' + slug}>
             <div className={hp.heading}>
                 <h3>{name}</h3>
-                {logo && <Image className={hp.logo} src={url(logo)} width={logo.width} height={logo.height} alt={logo.alt} />}
+                {logo && <Image className={hp.logo} src={url(logo)} width={logo.width} height={logo.height} alt={logo.alt} priority />}
             </div>
             <h4>{subtitle}</h4>
             <div className={hp.labelContainer}>

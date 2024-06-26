@@ -3,7 +3,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fal } from '@fortawesome/pro-light-svg-icons'
 import { far } from '@fortawesome/pro-regular-svg-icons'
 import { fas } from '@fortawesome/pro-solid-svg-icons'
-import { Inter } from '@next/font/google'
+import { Inter } from 'next/font/google'
 import { initialize } from 'config/firebase.config'
 import Head from 'next/head'
 import Script from 'next/script'
@@ -73,7 +73,7 @@ const Meta = () => {
             content="We design software that is a joy to use." />
         <meta key="ogdescription" property="og:description"
             content="We design software that is a joy to use." />
-        <meta property="og:logo" content="/d7mtg_logo.png"/>
+        <meta property="og:logo" content="/d7mtg_logo.png" />
         <meta name="author" content="D7mtg" />
         <meta name="copyright" content="D7mtg" />
         <meta key="ogimage" property="og:image" content="/ogpreview.png" />

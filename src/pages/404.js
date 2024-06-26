@@ -1,4 +1,4 @@
-import { Fraunces } from '@next/font/google'
+import { Fraunces } from 'next/font/google'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
