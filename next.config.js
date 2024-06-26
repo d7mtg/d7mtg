@@ -11,8 +11,8 @@ const nextConfig = {
     rewrites() {
         return [
             {
-                source: '/contact',
-                destination: '/contact/index.html'
+                source: '/contact-more',
+                destination: '/contact-more/index.html'
             },
             {
                 source: '/kosher',

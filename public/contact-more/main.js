@@ -40,7 +40,7 @@ document.addEventListener('readystatechange', event => {
 function macos() {
     macosIcon.classList.add("selectedOS");
     for (var i = 0; i < appicons.length; i++) {
-        appicons[i].src = "/contact/macos/" + appicons[i].id + ".png";
+        appicons[i].src = "/contact-more/macos/" + appicons[i].id + ".png";
         appicons[i].classList.add("macos");
     }
     monthText.innerText = month;
@@ -52,7 +52,7 @@ function windows() {
     imessage.style.display = "none";
     applemaps.style.display = "none";
     for (var i = 0; i < appicons.length; i++) {
-        appicons[i].src = "/contact/windows/" + appicons[i].id + ".png";
+        appicons[i].src = "/contact-more/windows/" + appicons[i].id + ".png";
         //remove other OS classes
         appicons[i].classList.add("windows");
     }
@@ -61,7 +61,7 @@ function windows() {
 function ios() {
     iosIcon.classList.add("selectedOS");
     for (var i = 0; i < appicons.length; i++) {
-        appicons[i].src = "/contact/ios/" + appicons[i].id + ".png";
+        appicons[i].src = "/contact-more/ios/" + appicons[i].id + ".png";
         //remove other OS classes
         appicons[i].classList.add("ios");
     }
@@ -74,7 +74,7 @@ function android() {
     imessage.style.display = "none";
     applemaps.style.display = "none";
     for (var i = 0; i < appicons.length; i++) {
-        appicons[i].src = "/contact/android/" + appicons[i].id + ".png";
+        appicons[i].src = "/contact-more/android/" + appicons[i].id + ".png";
         appicons[i].classList.add("android");
     }
 }
