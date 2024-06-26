@@ -2,11 +2,14 @@
 const withSvgr = require('next-plugin-svgr');
 
 const nextConfig = {
-    reactStrictMode: false,
+    reactStrictMode: true,
     images: {
-        domains: [
-            'firebasestorage.googleapis.com'
-        ]
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'firebasestorage.googleapis.com',
+            }
+        ],
     },
     rewrites() {
         return [

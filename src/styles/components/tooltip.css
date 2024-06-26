@@ -1,0 +1,135 @@
+[data-tooltip] {
+    position: relative;
+
+    --spacing: 6px;
+    --top: 0;
+    --left: 50%;
+    --x: -50%;
+    --y: calc(-100% - var(--spacing));
+
+    /*  Tooltip */
+
+    &::after {
+        @apply drop-shadow-xl rounded-sm transition-opacity pointer-events-none;
+
+        content: attr(data-tooltip);
+        position: absolute;
+        white-space: nowrap;
+        z-index: 100;
+        display: inline-block;
+        text-align: center;
+        top: var(--top);
+        left: var(--left);
+        transform: translate(var(--x), var(--y));
+        font-size: 10px;
+        line-height: 12px;
+        color: white;
+        background-color: theme('colors.gray.900');
+        padding: 4px 8px;
+        margin: auto;
+        opacity: 0;
+    }
+
+    /* Tooltip anchoring */
+
+    &.anchor-top {
+        --top: 0;
+        --left: 50%;
+        --x: -50%;
+        --y: calc(-100% - var(--spacing));
+    }
+
+    &.anchor-left {
+        --top: 50%;
+        --left: 0;
+        --x: calc(-100% - var(--spacing));
+        --y: -50%;
+    }
+    &.anchor-right {
+        --top: 50%;
+        --left: 100%;
+        --x: var(--spacing);
+        --y: -50%;
+    }
+    &.anchor-bottom {
+        --top: 100%;
+        --left: 50%;
+        --x: -50%;
+        --y: var(--spacing);
+    }
+
+    /*  Arrow */
+    
+    &.arrow {
+        --spacing: 10px;
+        --arrow-size: 4px;
+        --no-border: var(--arrow-size) solid transparent;
+        --arrow-border: var(--arrow-size) solid theme('colors.gray.900');
+
+        &::before {
+            @apply drop-shadow-xl transition-opacity pointer-events-none;
+
+            content: '';
+            position: absolute;
+            z-index: 100;
+            top: var(--top);
+            left: var(--left);
+            transform: translate(var(--x), var(--y));
+            width: 0;
+            height: 0;
+            opacity: 0;
+        }
+
+        &::before,
+        &.anchor-top::before {
+            border-top: var(--arrow-border);
+            border-right: var(--no-border);
+            border-bottom: none;
+            border-left: var(--no-border);
+            --y: calc(-100% - var(--spacing) + var(--arrow-size));
+        }
+
+        &.anchor-right::before {
+            border-top: var(--no-border);
+            border-right: var(--arrow-border);
+            border-bottom: var(--no-border);
+            border-left: none;
+            --x: calc(var(--spacing) - (var(--arrow-size)));
+            --y: -50%;
+        }
+
+        &.anchor-bottom::before {
+            border-top: none;
+            border-right: var(--no-border);
+            border-bottom: var(--arrow-border);
+            border-left: var(--no-border);
+            --y: calc(var(--spacing) - (var(--arrow-size)));
+        }
+
+        &.anchor-left::before {
+            border-top: var(--no-border);
+            border-right: none;
+            border-bottom: var(--no-border);
+            border-left: var(--arrow-border);
+            --x: calc(-100% - var(--spacing) + (var(--arrow-size)));
+            --y: -50%;
+        }
+    }
+
+    /* Activate on hover, or focus visible */
+
+    &.arrow:hover::before,
+    &.arrow:focus-visible::before,
+    &.arrow:has(:focus-visible)::before,
+    &:hover::after,
+    &:focus-visible::after,
+    &:has(:focus-visible)::after {
+        transition-delay: 1s;
+        opacity: 1;
+    }
+
+    &.arrow.instant::before,
+    &.instant::after {
+        transition-delay: 0s;
+    }
+}

@@ -1,57 +1,50 @@
 /*
-  Josh's Custom CSS Reset
-  https://www.joshwcomeau.com/css/custom-css-reset/
+    Josh's Custom CSS Reset
+    https://www.joshwcomeau.com/css/custom-css-reset/
 */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
-@layer {
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
-    }
+:root {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+}
 
-    html,
-    body,
-    #root,
-    #__next {
-        height: 100%;
-    }
+html,
+body {
+    height: 100%;
+}
 
-    body {
-        -webkit-font-smoothing: antialiased;
-        
-    }
+main {
+    min-height: 100%;
+    isolation: isolate;
+}
 
-    img,
-    picture,
-    video,
-    canvas,
-    svg {
-        display: block;
-        max-width: 100%;
-        margin: 0;
-    }
+input,
+textarea,
+button,
+select,
+a {
+    outline: none;
+}
 
-    input,
-    button,
-    textarea,
-    select {
-        font: inherit;
-        font-size: 13px;
-    }
+input,
+textarea,
+button,
+select {
+    font: inherit;
+}
 
-    p,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        overflow-wrap: break-word;
-    }
-
-    #root,
-    #__next {
-        isolation: isolate;
-    }
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
 }

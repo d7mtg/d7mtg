@@ -3,44 +3,26 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fal } from '@fortawesome/pro-light-svg-icons'
 import { far } from '@fortawesome/pro-regular-svg-icons'
 import { fas } from '@fortawesome/pro-solid-svg-icons'
-import { Inter } from 'next/font/google'
+import { Analytics as VercelAnalytics } from '@vercel/analytics/react'
 import { initialize } from 'config/firebase.config'
 import Head from 'next/head'
 import Script from 'next/script'
-import { Analytics as VercelAnalytics } from '@vercel/analytics/react'
+import fonts from 'assets/fonts'
 
-import 'styles/reset.css'
-import 'lightgallery/css/lightgallery.css'
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import 'lightgallery/css/lightgallery.css'
 import 'styles/globals.scss'
+import 'styles/index.css'
 
 const { library, config } = require('@fortawesome/fontawesome-svg-core')
 config.autoAddCss = false
 library.add(fab, fal, fas, far)
 
-const inter = Inter({
-    subsets: ['latin'],
-    fallback: [
-        '-apple-system',
-        'BlinkMacSystemFont',
-        '"Segoe UI"',
-        'Roboto',
-        'Helvetica',
-        'Arial',
-        'sans-serif',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"'
-    ],
-    display: 'swap'
-})
-
-
 initialize()
 
 
 function MyApp({ Component, pageProps }) {
-    return <main className={inter.className} id='root'>
+    return <main className={fonts} id='root'>
         <Meta />
         <Analytics google='G-2D8Q5R25WZ' clarity='9yg6bsle5u' />
         <Script src="https://assets.usestyle.ai/seonajsplugin" defer id="seona-js-plugin" />
