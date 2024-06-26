@@ -43,6 +43,7 @@ function MyApp({ Component, pageProps }) {
     return <main className={inter.className} id='root'>
         <Meta />
         <Analytics google='G-2D8Q5R25WZ' clarity='9yg6bsle5u' />
+        <Script src="https://assets.usestyle.ai/seonajsplugin" defer id="seona-js-plugin" />
         <JsonLD />
 
         <Component {...pageProps} />
@@ -60,7 +61,6 @@ const Meta = () => {
         <link rel="apple-touch-icon" type="image/png" href="/photos/appleicon.ico" />
         <link rel="apple-touch-icon" type="image/png" href="/photos/appleicon.png" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <script src="https://assets.usestyle.ai/seonajsplugin" defer id="seona-js-plugin"></script>
         <link href="/favicon.png" rel="shortcut icon" type="image/png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="language" content="English" />
