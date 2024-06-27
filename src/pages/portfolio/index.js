@@ -1,11 +1,9 @@
-import cx from 'clsx'
-import { Footer, Logo } from 'components'
+import { Footer, Topbar } from 'components'
 import Head from 'next/head'
 import Link from 'next/link'
 import { getProjects, url } from 'utils/backend'
-import h from './Header.module.scss'
-import s from './index.module.scss'
 import p from './ProjectBlock.module.scss'
+import s from './index.module.scss'
 
 export default function Portfolio({ projects }) {
     return <>
@@ -13,7 +11,10 @@ export default function Portfolio({ projects }) {
             <title>D7mtg | Brooklyn UX Design Agency | Portfolio</title>
         </Head>
 
-        <Header />
+        <div className='px-20 py-[70px]'>
+
+            <Topbar />
+        </div>
 
         <div className={s.root}>
             {projects.map(p => <ProjectBlock key={p.slug} {...p} />)}
@@ -21,20 +22,6 @@ export default function Portfolio({ projects }) {
 
         <Footer />
     </>
-}
-
-
-const Header = () => {
-    return <div className={h.root}>
-        <Link href="/">
-            <Logo className={h.logo} />
-        </Link>
-
-        <div className={h.menu}>
-            <a href="#" className={cx(h.item, h.current)}>Work</a>
-            <a href="/contact" className={h.item}>Contact</a>
-        </div>
-    </div>
 }
 
 export const ProjectBlock = props => {

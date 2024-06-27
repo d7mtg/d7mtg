@@ -1,6 +1,6 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Logo } from 'components'
+import { Topbar } from 'components'
 import LightGallery from 'lightgallery/react'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -35,10 +35,8 @@ export default function Project({ project }) {
             </>}
         </Head>
 
-        <div className={s.logoContainer} >
-            <Link href='/'>
-                <Logo className={s.logo} />
-            </Link>
+        <div className='px-20 py-[70px]' >
+            <Topbar />
         </div>
         <div className={s.line} />
 

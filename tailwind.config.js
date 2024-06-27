@@ -15,6 +15,9 @@ module.exports = {
           '200': '#E2E4E9',
           '500': '#525866',
           '950': '#0E121B'
+        },
+        transitionDuration: {
+          DEFAULT: '300ms'
         }
       }
     },
@@ -23,9 +26,6 @@ module.exports = {
         ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
         { fontFeatureSettings: "'liga', 'calt', 'opsz'" }
       ]
-    },
-    transitionDuration: {
-      DEFAULT: '300ms'
     }
   }
 }

@@ -1,5 +1,6 @@
 import { ReactComponent as Logo } from 'assets/illustrations/logo.svg'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { ComponentProps } from 'react'
 import { cx, merge } from 'utils/styles'
 
@@ -7,12 +8,21 @@ interface TopbarProps extends ComponentProps<'header'> {}
 
 export function Topbar(props: TopbarProps) {
     const { className, ...rest } = props
+
+    const pathname = usePathname()
+
     return (
-        <header className={merge('flex flex-col md:flex-row justify-between items-center gap-10', className)} {...rest}>
-            <Logo />
-            <nav className='flex gap-7 text-gray-500 font-semibold'>
-                <Item href='/portfolio'>Work</Item>
-                <Item href='/contact-more'>Contact</Item>
+        <header className={merge('flex flex-col md:flex-row justify-between items-center gap-6', className)} {...rest}>
+            <Link href='/'>
+                <Logo />
+            </Link>
+            <nav className='flex gap-7 font-semibold'>
+                <Item selected={pathname.startsWith('/portfolio')} href='/portfolio'>
+                    Work
+                </Item>
+                <Item selected={pathname === '/contact'} href='/contact-more'>
+                    Contact
+                </Item>
             </nav>
         </header>
     )
@@ -25,15 +35,5 @@ interface ItemProps extends ComponentProps<typeof Link> {
 function Item(props: ItemProps) {
     const { selected, ...rest } = props
 
-    return (
-        <Link
-            className={cx(
-                'transition-colors relative',
-                'after:bg-gray-500 after:content-[""] after:absolute after:bottom-0 after:left-0',
-                'after:w-full after:h-[0.1em] after:scale-x-0  after:origin-right after:transition',
-                'hover:after:scale-x-100 hover:after:origin-left'
-            )}
-            {...rest}
-        />
-    )
+    return <Link className={cx('transition-colors', selected ? 'text-gray-500' : 'text-gray-400')} {...rest} />
 }

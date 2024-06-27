@@ -1,9 +1,25 @@
 .button {
-    @apply text-sm font-medium px-5 py-2.5 rounded-xl;
+    @apply text-gray-950 text-sm transition disabled:pointer-events-none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 10px;
+    padding: 10px 26px;
+    font-weight: 500;
 
     &.primary {
-        @apply text-white shadow-md hover:shadow-lg active:shadow-xl transition;
+        @apply bg-gray-950  text-white;
 
-        background: linear-gradient(to top left, white -50%, #0e121b 0%, white 400%);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%),
+            theme('colors.gray.950');
+        box-shadow: 0 1px 2px rgba(27, 28, 29, 0.48), 0 0 0 1px theme('colors.gray.950'),
+            inset 1px 1px rgba(255, 255, 255, 0.12), inset -1px 1px rgba(255, 255, 255, 0.12);
+
+        &:hover {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 100%),
+                theme('colors.gray.950');
+        }
     }
 }

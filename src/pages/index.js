@@ -34,18 +34,29 @@ export default function Home({ projects }) {
 const Banner = () => {
     return <section style={{
         backgroundImage: `url(${grid})`
-    }} className='flex flex-col gap-5 p-14 pb-0 md:p-20 h-svh bg-white bg-center text-gray-500 text-center'>
+    }} className='flex flex-col gap-10 p-14 md:px-20 md:py-[70px] md:min-h-svh bg-white 
+    bg-[length:250%] md:bg-[length:auto] bg-center text-gray-500 text-center'>
         <Topbar />
-        <div className='flex flex-col justify-evenly flex-1 items-center'>
+        <div className='flex flex-col justify-evenly gap-20 flex-1 items-center'>
 
-            <h1 className='text-5xl md:text-7xl font-semibold'>
-                We design<br />
-                software that is<br />
-                a <Stars className='inline' />
-                <span className='bg-clip-text text-transparent bg-[linear-gradient(to_left,#f9944a,#f9d84a_150%)]'>
-                    joy
+            <h1 className='text-5xl md:text-7xl font-semibold text-pretty sm:whitespace-pre-line tracking-tight'>
+                We design{'\n'}
+                software that is{'\n'}
+                <span className='whitespace-nowrap'>
+                    a <Stars className='inline' />
+                    <span className='bg-clip-text text-transparent bg-[radial-gradient(circle_at_bottom_right,#f9944a,#f9d84a)]'>
+                        joy
+                    </span>
                 </span>{' '}
-                to use
+                <span className='whitespace-nowrap'>
+                    to <button className='select-none inline-flex bg-white 
+                    ring-4 ring-gray-200 rounded-2xl md:rounded-3xl px-3 py-1 
+                    duration-500 hover:duration-200
+                    group/button transition shadow-lg hover:shadow-2xl
+                    active:shadow-none active:bg-gray-100'>
+                        <div className='-mt-2.5 md:-mt-3'>use</div>
+                    </button>
+                </span>
 
             </h1>
 
