@@ -73,7 +73,8 @@ const nextConfig = {
     },
     experimental: {
         scrollRestoration: true
-    }
+    },
+    fileLoader: true
 }
 
 module.exports = withSvgr(nextConfig)

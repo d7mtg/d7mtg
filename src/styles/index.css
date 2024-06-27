@@ -2,6 +2,7 @@
 
 @import url(./reset.css) layer(reset);
 @import url(./base.css) layer(base);
+@import url(./typography.css) layer(base);
 @import url(./components/index.css) layer(components);
 @import url(./utilities.css) layer(utilities);
 

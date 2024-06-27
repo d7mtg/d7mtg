@@ -9,12 +9,23 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   theme: {
+    extend: {
+      colors: {
+        gray: {
+          '200': '#E2E4E9',
+          '500': '#525866',
+          '950': '#0E121B'
+        }
+      }
+    },
     fontFamily: {
       sans: [
         ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
-        { fontFeatureSettings: "'opsz'" }
+        { fontFeatureSettings: "'liga', 'calt', 'opsz'" }
       ]
     },
-    extend: {}
+    transitionDuration: {
+      DEFAULT: '300ms'
+    }
   }
 }

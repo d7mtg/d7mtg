@@ -1,0 +1,63 @@
+<svg width="1524" height="1115" viewBox="0 0 1524 1115" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="mask0_1_1608" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="248" y="-28" width="1028" height="1028">
+        <rect width="1027.5" height="1027.5" transform="translate(248.25 -28)" fill="url(#paint0_radial_1_1608)"/>
+    </mask>
+    <g mask="url(#mask0_1_1608)">
+        <g clip-path="url(#clip0_1_1608)">
+            <g clip-path="url(#clip1_1_1608)">
+                <line x1="248.607" y1="-28" x2="248.607" y2="999.5" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="305.69" y1="-28" x2="305.69" y2="999.5" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="362.773" y1="-28" x2="362.773" y2="999.5" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="419.857" y1="-28" x2="419.857" y2="999.5" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="476.94" y1="-28" x2="476.94" y2="999.5" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="534.023" y1="-28" x2="534.023" y2="999.5" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="591.107" y1="-28" x2="591.107" y2="999.5" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="648.19" y1="-28" x2="648.19" y2="999.5" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="705.273" y1="-28" x2="705.273" y2="999.5" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="762.357" y1="-28" x2="762.357" y2="999.5" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="819.44" y1="-28" x2="819.44" y2="999.5" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="876.523" y1="-28" x2="876.523" y2="999.5" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="933.607" y1="-28" x2="933.607" y2="999.5" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="990.69" y1="-28" x2="990.69" y2="999.5" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="1047.77" y1="-28" x2="1047.77" y2="999.5" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="1104.86" y1="-28" x2="1104.86" y2="999.5" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="1161.94" y1="-28" x2="1161.94" y2="999.5" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="1219.02" y1="-28" x2="1219.02" y2="999.5" stroke="#D0D5DD" stroke-width="0.713542"/>
+            </g>
+            <g clip-path="url(#clip2_1_1608)">
+                <line x1="77" y1="28.7265" x2="1447" y2="28.7265" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="77" y1="85.8099" x2="1447" y2="85.8099" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="77" y1="142.893" x2="1447" y2="142.893" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="77" y1="199.977" x2="1447" y2="199.977" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="77" y1="257.06" x2="1447" y2="257.06" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="77" y1="314.143" x2="1447" y2="314.143" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="77" y1="371.227" x2="1447" y2="371.227" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="77" y1="428.31" x2="1447" y2="428.31" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="77" y1="485.393" x2="1447" y2="485.393" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="77" y1="542.477" x2="1447" y2="542.477" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="77" y1="599.56" x2="1447" y2="599.56" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="77" y1="656.643" x2="1447" y2="656.643" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="77" y1="713.727" x2="1447" y2="713.727" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="77" y1="770.81" x2="1447" y2="770.81" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="77" y1="827.893" x2="1447" y2="827.893" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="77" y1="884.976" x2="1447" y2="884.977" stroke="#D0D5DD" stroke-width="0.713542"/>
+                <line x1="77" y1="942.06" x2="1447" y2="942.06" stroke="#D0D5DD" stroke-width="0.713542"/>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <radialGradient id="paint0_radial_1_1608" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(513.75 513.75) rotate(90) scale(513.75 513.75)">
+            <stop/>
+            <stop offset="1" stop-opacity="0"/>
+        </radialGradient>
+        <clipPath id="clip0_1_1608">
+            <rect width="1370" height="1027.5" fill="white" transform="translate(77 -28)"/>
+        </clipPath>
+        <clipPath id="clip1_1_1608">
+            <rect width="1370" height="1027.5" fill="white" transform="translate(77 -28)"/>
+        </clipPath>
+        <clipPath id="clip2_1_1608">
+            <rect width="1370" height="1027.5" fill="white" transform="translate(77 -28)"/>
+        </clipPath>
+    </defs>
+</svg>

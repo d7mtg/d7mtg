@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Footer, Logo } from 'components'
+import { Footer } from 'components'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -8,6 +8,9 @@ import ReactMarkdown from 'react-markdown'
 import { getProjects, url } from 'utils/backend'
 import hp from './HomeProject.module.scss'
 import s from './index.module.scss'
+import grid from 'assets/illustrations/grid.svg'
+import { ReactComponent as Stars } from 'assets/illustrations/stars.svg'
+import { Topbar } from 'components'
 
 export default function Home({ projects }) {
     return <>
@@ -29,26 +32,28 @@ export default function Home({ projects }) {
 
 
 const Banner = () => {
-    return <div className={s.banner}>
-        <div className={s.topbar}>
-            <Logo className={s.logo} black />
-            <div className={s.menu}>
-                <Link href="/portfolio" className={s.item}>Work</Link>
-                <Link href="/contact" className={s.item}>Contact</Link>
-            </div>
-        </div>
+    return <section style={{
+        backgroundImage: `url(${grid})`
+    }} className='flex flex-col gap-5 p-14 md:p-20 h-dvh bg-white bg-center text-gray-500 text-center'>
+        <Topbar />
+        <div className='flex flex-col justify-evenly flex-1 items-center'>
 
-        <p className={s.header}>
-            We design software that is a joy to use<span className={s.bounceDot}>.</span>
+            <h1 className='text-5xl md:text-7xl font-semibold'>
+                We design<br />
+                software that is<br />
+                a <Stars className='inline' />
+                <span className='bg-clip-text text-transparent bg-[linear-gradient(to_left,#f9944a,#f9d84a_150%)]'>
+                    joy
+                </span>{' '}
+                to use
 
-            <br /><br />
-            <span className={s.subheader}>D7mtg is a UX and web agency in Brooklyn.</span>
-        </p>
-        <div className={s.scrollDown}>
-            <FontAwesomeIcon icon={['fas', 'arrow-down']} />
-            <p>Keep scrolling</p>
+            </h1>
+
+            <h3 className='text-lg md:text-xl'>D7mtg is a UX and web<br />agency in Brooklyn.</h3>
+
+            <Link href='/contact-more' className='button primary'>Contact</Link>
         </div>
-    </div>
+    </section>
 }
 
 

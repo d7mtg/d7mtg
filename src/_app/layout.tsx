@@ -1,18 +1,17 @@
-
+import { Analytics as VercelAnalytics } from '@vercel/analytics/react'
+import fonts from 'assets/fonts'
+import { LayoutProps } from 'types/layout'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fal } from '@fortawesome/pro-light-svg-icons'
 import { far } from '@fortawesome/pro-regular-svg-icons'
 import { fas } from '@fortawesome/pro-solid-svg-icons'
-import { Analytics as VercelAnalytics } from '@vercel/analytics/react'
-import { initialize } from 'config/firebase.config'
-import Head from 'next/head'
 import Script from 'next/script'
-import fonts from 'assets/fonts'
+import { initialize } from 'config/firebase.config'
 
+import './index.css'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import 'lightgallery/css/lightgallery.css'
 import 'styles/globals.scss'
-import 'styles/index.css'
 
 const { library, config } = require('@fortawesome/fontawesome-svg-core')
 config.autoAddCss = false
@@ -20,19 +19,78 @@ library.add(fab, fal, fas, far)
 
 initialize()
 
-
-function MyApp({ Component, pageProps }) {
-    return <main className={fonts + ' font-sans'} id='root'>
-        <Meta />
-        <Analytics google='G-2D8Q5R25WZ' clarity='9yg6bsle5u' />
-        <Script src="https://assets.usestyle.ai/seonajsplugin" defer id="seona-js-plugin" />
-        <JsonLD />
-
-        <Component {...pageProps} />
-    </main>
+export default function RootLayout({ children }: LayoutProps) {
+    // Chrome extensions mess with classnames and attributes, disable warnings
+    return (
+        <html className={fonts} lang='en' translate='no' suppressHydrationWarning>
+            <body suppressHydrationWarning>
+                {children}
+                <Script src='https://assets.usestyle.ai/seonajsplugin' defer id='seona-js-plugin' />
+                <Analytics google='G-2D8Q5R25WZ' clarity='9yg6bsle5u' />
+                <JsonLD />
+            </body>
+        </html>
+    )
 }
 
-export default MyApp
+interface AnalyticsProps {
+    google: string
+    clarity: string
+}
+
+function Analytics({ google, clarity }: AnalyticsProps) {
+    return (
+        <>
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${google}`} />
+            <Script id='google-analytics'>
+                {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){window.dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', '${google}');
+            `}
+            </Script>
+
+            <Script id='clarity-analytics'>
+                {`
+                (function (c, l, a, r, i, t, y) {
+                    c[a] = c[a] || function () {
+                        (c[a].q = c[a].q || []).push(arguments)
+                    };
+                t = l.createElement(r);
+                t.async = 1;
+                t.src = "https://www.clarity.ms/tag/" + i;
+                y = l.getElementsByTagName(r)[0];
+                y.parentNode.insertBefore(t, y);
+                })(window, document, "clarity", "script", "${clarity}");
+            `}
+            </Script>
+            <VercelAnalytics />
+        </>
+    )
+}
+
+const JsonLD = () => (
+    <Script type='application/ld+json' strategy='beforeInteractive' id='json-ld'>
+        {`{
+            "@context": "http://schema.org",
+            "@type": "LocalBusiness",
+            "name": "D7mtg",
+            "image": "https://d7m.tg/ogpreview.png",
+            "telephone": "845-671-2116",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "63 Flushing Avenue Building 27",
+                "addressLocality": "Brooklyn NY 11205",
+                "addressCountry": "USA"
+            }
+        }`}
+    </Script>
+)
+
+/* 
+
 
 const Meta = () => {
     return <Head>
@@ -69,50 +127,4 @@ const Meta = () => {
     </Head>
 }
 
-
-const Analytics = ({ google, clarity }) => {
-    return <>
-        <Script src={`https://www.googletagmanager.com/gtag/js?id=${google}`} />
-        <Script id="google-analytics">
-            {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){window.dataLayer.push(arguments);}
-                gtag('js', new Date());
-
-                gtag('config', '${google}');
-            `}
-        </Script>
-
-        <Script id='clarity-analytics'>
-            {`
-                (function (c, l, a, r, i, t, y) {
-                    c[a] = c[a] || function () {
-                        (c[a].q = c[a].q || []).push(arguments)
-                    };
-                t = l.createElement(r);
-                t.async = 1;
-                t.src = "https://www.clarity.ms/tag/" + i;
-                y = l.getElementsByTagName(r)[0];
-                y.parentNode.insertBefore(t, y);
-                })(window, document, "clarity", "script", "${clarity}");
-            `}
-        </Script>
-        <VercelAnalytics />
-    </>
-}
-
-const JsonLD = () => <Script type='application/ld+json' strategy='beforeInteractive' id='json-ld'>
-    {`{
-            "@context": "http://schema.org",
-            "@type": "LocalBusiness",
-            "name": "D7mtg",
-            "image": "https://d7m.tg/ogpreview.png",
-            "telephone": "845-671-2116",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "63 Flushing Avenue Building 27",
-                "addressLocality": "Brooklyn NY 11205",
-                "addressCountry": "USA"
-            }
-        }`}
-</Script>
+*/
