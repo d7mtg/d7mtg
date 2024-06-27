@@ -1,4 +1,4 @@
-import UploadCloud from 'assets/icons/upload-cloud.svg'
+import { ReactComponent as UploadCloud } from 'assets/icons/upload-cloud.svg'
 import cx from 'clsx'
 import { Button, ProgressBar } from 'components'
 import { useEffect, useRef, useState } from 'react'
