@@ -1,0 +1,73 @@
+.text-field {
+    @apply text-gray-950 border bg-white rounded-lg
+    focus-within:border-gray-950 focus-within:ring-2 focus-within:ring-gray-300 
+    transition shadow-sm;
+
+    font-weight: normal;
+    padding: 6px 12px;
+    outline: none;
+    width: 100%;
+    overflow: hidden;
+
+    svg {
+        @apply text-gray-400;
+    }
+
+    &.invalid {
+        @apply border-red-500 focus-within:ring-red-200 text-red-700;
+
+        svg {
+            @apply text-red-700;
+        }
+    }
+}
+
+:is(input, textarea).text-field:disabled,
+.text-field:has(input:disabled, textarea:disabled) {
+    @apply bg-gray-100 text-gray-200;
+    pointer-events: none;
+
+    svg {
+        @apply text-gray-200;
+    }
+}
+
+:is(input, textarea).text-field,
+.text-field :is(input, textarea) {
+    @apply text-gray-950 placeholder:text-gray-400 transition;
+
+    resize: none;
+    outline: none;
+    width: 100%;
+}
+
+:is(input, textarea).text-field.invalid,
+.text-field.invalid :is(input, textarea) {
+    @apply placeholder:text-red-700/50 text-red-700;
+}
+
+.text-field:not(input, textarea) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.field-label {
+    @apply text-sm;
+
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    gap: 6px;
+
+    .helper {
+        @apply text-xs text-caption;
+
+        margin-top: -2px;
+        font-weight: normal;
+    }
+
+    &:has(> .invalid) .helper {
+        @apply text-red-700;
+    }
+}

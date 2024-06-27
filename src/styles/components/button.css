@@ -1,5 +1,5 @@
 .button {
-    @apply text-gray-950 text-sm transition disabled:pointer-events-none;
+    @apply text-gray-950 text-sm transition disabled:opacity-50 disabled:pointer-events-none;
 
     display: flex;
     justify-content: center;

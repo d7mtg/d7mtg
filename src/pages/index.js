@@ -34,7 +34,7 @@ export default function Home({ projects }) {
 const Banner = () => {
     return <section style={{
         backgroundImage: `url(${grid})`
-    }} className='flex flex-col gap-10 p-14 md:px-20 md:py-[70px] md:min-h-svh bg-white 
+    }} className='flex flex-col gap-10 pb-24 md:min-h-svh bg-gray-100 
     bg-[length:250%] md:bg-[length:auto] bg-center text-gray-500 text-center'>
         <Topbar />
         <div className='flex flex-col justify-evenly gap-20 flex-1 items-center'>
@@ -62,7 +62,7 @@ const Banner = () => {
 
             <h3 className='text-lg md:text-xl'>D7mtg is a UX and web<br />agency in Brooklyn.</h3>
 
-            <Link href='/contact-more' className='button primary'>Contact</Link>
+            <Link href='/contact' className='button primary'>Contact</Link>
         </div>
     </section>
 }

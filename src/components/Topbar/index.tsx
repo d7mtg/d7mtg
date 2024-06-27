@@ -12,15 +12,20 @@ export function Topbar(props: TopbarProps) {
     const pathname = usePathname()
 
     return (
-        <header className={merge('flex flex-col md:flex-row justify-between items-center gap-6', className)} {...rest}>
+        <header
+            className={merge(
+                'px-5 pt-5 pb-8 md:px-20 md:py-[70px] flex flex-row justify-between items-center gap-6',
+                className
+            )}
+            {...rest}>
             <Link href='/'>
-                <Logo />
+                <Logo className='scale-75 md:scale-100 origin-left transition-transform' />
             </Link>
             <nav className='flex gap-7 font-semibold'>
                 <Item selected={pathname.startsWith('/portfolio')} href='/portfolio'>
                     Work
                 </Item>
-                <Item selected={pathname === '/contact'} href='/contact-more'>
+                <Item selected={pathname === '/contact'} href='/contact'>
                     Contact
                 </Item>
             </nav>

@@ -11,10 +11,7 @@ export default function Portfolio({ projects }) {
             <title>D7mtg | Brooklyn UX Design Agency | Portfolio</title>
         </Head>
 
-        <div className='px-20 py-[70px]'>
-
-            <Topbar />
-        </div>
+        <Topbar />
 
         <div className={s.root}>
             {projects.map(p => <ProjectBlock key={p.slug} {...p} />)}

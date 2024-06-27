@@ -1,0 +1,26 @@
+@layer tailwind-components {
+    .segmented-control {
+        @apply flex gap-1 p-1 justify-stretch rounded-xl border border-gray-200 bg-gray-50;
+    }
+
+    .segmented-button {
+        @apply text-gray-400 text-sm font-medium transition-colors duration-700;
+
+        padding: 6px;
+        z-index: 1;
+
+        &.selected {
+            @apply text-gray-950;
+        }
+    }
+
+    .tab {
+        @apply shadow-2xl;
+
+        border-radius: 8px;
+        background: white;
+        box-shadow: 0px 9px 3px 0px rgba(139, 140, 160, 0), 0px 6px 2px 0px rgba(139, 140, 160, 0.02),
+            0px 3px 2px 0px rgba(139, 140, 160, 0.06), 0px 1px 1px 0px rgba(139, 140, 160, 0.1),
+            0px 0px 1px 0px rgba(139, 140, 160, 0.12);
+    }
+}

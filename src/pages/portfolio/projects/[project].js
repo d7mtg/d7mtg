@@ -35,9 +35,7 @@ export default function Project({ project }) {
             </>}
         </Head>
 
-        <div className='px-20 py-[70px]' >
-            <Topbar />
-        </div>
+        <Topbar />
         <div className={s.line} />
 
         <Blog {...project} />
