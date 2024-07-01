@@ -7,6 +7,7 @@ import { ReactComponent as Received } from 'assets/illustrations/received.svg'
 import { ChangeEvent, FormEvent, useState } from 'react'
 import Link from 'next/link'
 import { cx } from 'utils/styles'
+import animation from './pulse.module.css'
 
 type Status = 'ready' | 'submitting' | 'complete'
 type Service = 'saas' | 'mobile' | 'website' | 'other'
@@ -50,8 +51,8 @@ export default function ContactPage() {
     return (
         <section
             style={{ backgroundImage: `url(${grid})` }}
-            className=' flex flex-col bg-gray-100 min-h-full max-h-full overflow-auto [scrollbar-gutter:stable]
-            bg-top bg-[length:200%] md:bg-[length:auto] bg-no-repeat'>
+            className='text-gray-950 flex flex-col bg-gray-100 min-h-full max-h-full overflow-auto [scrollbar-gutter:stable]
+             bg-[length:250%] md:bg-[length:auto] bg-center bg-no-repeat'>
             <Topbar />
 
             <div className='flex flex-col items-center flex-1 gap-10 pb-10'>
@@ -83,8 +84,7 @@ export default function ContactPage() {
                 <Link
                     href='/contact-more'
                     className='flex items-center gap-2 mt-auto text-gray-700 text-xs font-medium pl-3 pr-4 py-1 rounded-full border border-gray-200'>
-                    {/* <div className='size-1.5 bg-green-dark rounded-full animate-pulsing' /> */}8 more ways to
-                    connect with D7mtg
+                    <div className={animation.pulse} />8 more ways to connect with D7mtg
                 </Link>
             </div>
         </section>

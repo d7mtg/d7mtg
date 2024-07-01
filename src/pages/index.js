@@ -34,8 +34,8 @@ export default function Home({ projects }) {
 const Banner = () => {
     return <section style={{
         backgroundImage: `url(${grid})`
-    }} className='flex flex-col gap-10 pb-24 md:min-h-svh bg-gray-100 
-    bg-[length:250%] md:bg-[length:auto] bg-center text-gray-500 text-center'>
+    }} className='flex flex-col gap-10 pb-24 md:min-h-svh bg-gray-100
+                    bg-[length:250%] md:bg-[length:auto] bg-center text-gray-500 text-center'>
         <Topbar />
         <div className='flex flex-col justify-evenly gap-20 flex-1 items-center'>
 

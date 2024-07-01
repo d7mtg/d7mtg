@@ -1,0 +1,19 @@
+.pulse {
+    width: 6px;
+    height: 6px;
+    background: rgb(71 205 137);
+    border-radius: 100%;
+    animation: pulsing 1.75s infinite;
+}
+
+@keyframes pulsing {
+    from {
+        box-shadow: 0 0 0 0 rgb(71 205 137);
+    }
+    70% {
+        box-shadow: 0 0 0 7px rgb(71 205 137 / 0);
+    }
+    to {
+        box-shadow: 0 0 0 0 rgb(71 205 137 / 0);
+    }
+}
