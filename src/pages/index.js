@@ -43,7 +43,7 @@ const Banner = () => {
                 We design{'\n'}
                 software that is{'\n'}
                 <span className='whitespace-nowrap'>
-                    a <Stars className='inline' />
+                    a <Stars className='inline h-[0.475em]' width={null} />
                     <span className='bg-clip-text text-transparent bg-[radial-gradient(circle_at_bottom_right,#f9944a,#f9d84a)]'>
                         joy
                     </span>
