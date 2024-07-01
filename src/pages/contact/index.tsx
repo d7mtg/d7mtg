@@ -152,7 +152,13 @@ function Form(props: FormProps) {
                 </span>
                 <div className={cx('text-field', nameError && 'invalid')}>
                     <User />
-                    <input placeholder='First and last name' value={name} onChange={handleNameChange} />
+                    <input
+                        placeholder='First and last name'
+                        name='name'
+                        autoComplete='name'
+                        value={name}
+                        onChange={handleNameChange}
+                    />
                 </div>
             </label>
             <label className='text-label'>
@@ -161,7 +167,13 @@ function Form(props: FormProps) {
                 </span>
                 <div className={cx('text-field', emailError && 'invalid')}>
                     <Email />
-                    <input placeholder='example@company.com' value={email} onChange={handleEmailChange} />
+                    <input
+                        placeholder='example@company.com'
+                        name='email'
+                        autoComplete='email'
+                        value={email}
+                        onChange={handleEmailChange}
+                    />
                 </div>
             </label>
             <label className='text-label'>
